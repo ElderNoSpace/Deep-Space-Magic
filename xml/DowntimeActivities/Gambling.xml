@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-sylesheet type="text/xsl" href="../Converter.xsl"?>
+<downtime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <activity>
+        <name>Gamble</name>
+        <type>Luck</type>
+        <score>1</score>
+        <effect>The amount of gold spent in the cost times 1.5 is gained.</effect>
+        <actions>
+            <action difficulty="10" upgrade="$l^2$">
+                <name>Gamble</name>
+                <type>Luck</type>
+                <cost>
+                    Any amount of gold.
+                </cost>
+                <effect>
+                    +1 Success Score
+                </effect>
+                <upeffect>The difficulty count is at -1 per level.</upeffect>
+            </action>
+        </actions>
+    </activity>
+</downtime>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
+<weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <weapon>
+        <name>Ballistic Pistol</name>
+        <type>One handed, Ballistic, Pistol, Shoot, Ranged</type>
+        <cost>60</cost>
+        <passiveEffect></passiveEffect>
+        <difficulty>15</difficulty>
+        <time>20</time>
+        <range>50</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Laser Pistol</name>
+        <type>One handed, Laser, Pistol, Shoot, Ranged</type>
+        <cost>85</cost>
+        <passiveEffect></passiveEffect>
+        <difficulty>15</difficulty>
+        <time>15</time>
+        <range>25</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Rail Pistol</name>
+        <type>One handed, Rail, Pistol, Shoot, Ranged</type>
+        <cost>85</cost>
+        <passiveEffect></passiveEffect>
+        <difficulty>15</difficulty>
+        <time>25</time>
+        <range>75</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Missile Pistol</name>
+        <type>One handed, Missile, Pistol, Shoot, Ranged</type>
+        <cost>60</cost>
+        <passiveEffect></passiveEffect>
+        <difficulty>20</difficulty>
+        <time>25</time>
+        <range>50</range>
+        <damage>2</damage>
+    </weapon>
+    <weapon>
+        <name>Plasma Pistol</name>
+        <type>One handed, Plasma, Pistol, Shoot, Ranged</type>
+        <cost>110</cost>
+        <passiveEffect></passiveEffect>
+        <difficulty>10</difficulty>
+        <time>20</time>
+        <range>5</range>
+        <aoe>22.5$^{\circ}$ cone</aoe>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Ballistic Rifle</name>
+        <type>Ballistic, Shoot, Ranged</type>
+        <cost>50</cost>
+        <difficulty>15</difficulty>
+        <time>20</time>
+        <range>100</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Laser Rifle</name>
+        <type>Laser, Shoot, Ranged</type>
+        <cost>75</cost>
+        <difficulty>15</difficulty>
+        <time>18</time>
+        <range>50</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Rail Rifle</name>
+        <type>Rail Shoot, Ranged</type>
+        <cost>75</cost>
+        <difficulty>15</difficulty>
+        <time>23</time>
+        <range>150</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Missile Gun</name>
+        <type>Missile, Shoot, Ranged</type>
+        <cost>50</cost>
+        <difficulty>20</difficulty>
+        <time>25</time>
+        <range>100</range>
+        <damage>2</damage>
+    </weapon>
+    <weapon>
+        <name>Plasma Gun</name>
+        <type>Plasma, Shoot, Ranged</type>
+        <cost>100</cost>
+        <difficulty>10</difficulty>
+        <time>20</time>
+        <range>10</range>
+        <aoe>45$^{\circ}$ cone</aoe>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Light Machine Gun</name>
+        <type>Rapid Fire, Ballistic, Shoot, Ranged</type>
+        <cost>150</cost>
+        <difficulty>15</difficulty>
+        <time>15</time>
+        <range>75</range>
+        <damage>1</damage>
+    </weapon>
+</weapons>

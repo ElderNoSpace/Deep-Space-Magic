@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--The hypertarget of action is Action_<name>-->
+    <!--The hypertarget of item is Item_<name>-->
+    <!--The hypertarget of weapon is Weapon_<name>-->
+    <!--The hypertarget of armour is Armour_<name>-->
+    <!--The hypertarget of activity is Activity_<name>-->
+
+    <!--The root element of a root xml file-->
+    <xs:element name="section" type="sectionType"/>
+
+    <!--The root element of a list of actions-->
+    <xs:element name="actions" type="actionsType"/>
+
+    <!--The rool element of a list of downtime activities-->
+    <xs:element name="downtime" type="downtimeType"/>
+
+    <!--The root element of a list of equipment-->
+    <xs:element name="equipment" abstract="true"/>
+    <xs:element name="items" type="itemsType" substitutionGroup="equipment"/>
+    <xs:element name="weapons" type="weaponsType" substitutionGroup="equipment"/>
+    <xs:element name="armours" type="armoursType" substitutionGroup="equipment"/>
+
+    <!--The root element of a list of classes-->
+    <xs:element name="classes" type="classesType"/>
+
+    <!--Things that go in a section of the latex document-->
+    <xs:complexType name="sectionType">
+         <xs:sequence>
+            <xs:element name="category" type="categoryType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--Common preamble elements to both categoryType and subcategoryType-->
+    <xs:group name="categoryGroup">
+        <xs:sequence>
+            <xs:element name="index" type="xs:string" minOccurs="0" />
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="filename" type="xs:anyURI" minOccurs="0" />
+            <xs:element name="description" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:group>
+
+    <!--The meat of a category-->
+    <xs:group name="categoryContentsGroup">
+        <xs:sequence>
+            <xs:element name="subdoc" type="refedType" minOccurs="0" maxOccurs="unbounded"/><!--Reference another xml document-->
+            <xs:element name="reftex" type="refedType" minOccurs="0" maxOccurs="unbounded"/><!--\import another tex document in the output-->
+            <xs:element name="things" type="thingType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--A category of things that go into a subsection-->
+    <xs:complexType name="categoryType">
+        <xs:sequence>
+            <xs:group ref="categoryGroup" />
+            <xs:choice>
+                <xs:group ref="categoryContentsGroup"/>
+                <xs:sequence>
+                    <xs:element name="subcategory" type="subCategoryType" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--A subcategory that go into a subsubsection-->
+    <xs:complexType name="subCategoryType">
+        <xs:sequence>
+            <xs:group ref="categoryGroup" />
+            <xs:group ref="categoryContentsGroup"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--A reference to another file-->
+    <xs:complexType name="refedType">
+        <xs:attribute name="ref" type="xs:anyURI" use="required"/>
+    </xs:complexType>
+
+    <!--A list of things that can be in a category or subcategory-->
+    <xs:complexType name="thingType">
+        <xs:all>
+            <xs:element ref="actions" minOccurs="0"/>
+            <xs:element ref="downtime" minOccurs="0"/>
+            <xs:element ref="equipment" minOccurs="0"/>
+            <xs:element ref="classes" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+
+    <!--A list of actions-->
+    <xs:complexType name="actionsType">
+        <xs:sequence>
+            <xs:element name="action" type="actionType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--Something a character can do-->
+    <xs:complexType name="actionType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:group ref="typeGroup"/>
+            <xs:element name="time" type="xs:string" minOccurs="0"/>
+            <xs:element name="cost" type="xs:string" minOccurs="0"/>
+            <xs:element name="effect" type="xs:string"/>
+            <xs:element name="upeffect" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="difficulty" type="xs:string"/>
+        <xs:attribute name="upgrade" type="xs:string"/>
+        <xs:attribute name="specialist" default="false" type="xs:boolean"/>
+        <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <!--A list of classes-->
+    <xs:complexType name="classesType">
+        <xs:sequence>
+            <xs:element name="class" type="classType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--A class-->
+    <xs:complexType name="classType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:group ref="typeGroup"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="level" type="levelType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <!--When the requirement is met the charater gains the benifit-->
+    <xs:complexType name="levelType">
+        <xs:sequence>
+            <xs:element name="requiredAction" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="benifit" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- A list of downtime activites-->
+    <xs:complexType name="downtimeType">
+        <xs:sequence>
+            <xs:element name="activity" type="activityType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--A downtime activity-->
+    <xs:complexType name="activityType">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:group ref="typeGroup"/>
+            <xs:element name="score" type="xs:int"/>
+            <xs:element name="effect" type="xs:string"/>
+            <xs:element ref="actions"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <!--Common elements to all equipment-->
+    <xs:group name="equipmentGroup">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:group ref="typeGroup"/>
+            <xs:element name="cost" type="xs:string"/>
+            <xs:element ref="actions" minOccurs="0"/>
+            <xs:element name="passiveEffect" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:group>
+
+    <!--A list of items-->
+    <xs:complexType name="itemsType">
+        <xs:sequence>
+            <xs:element name="item" type="itemType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <!--A basic type of equipment-->
+    <xs:complexType name="itemType">
+        <xs:group ref="equipmentGroup"/>
+    </xs:complexType>
+
+    <!--A list of weapons-->
+    <xs:complexType name="weaponsType">
+        <xs:sequence>
+            <xs:element name="weapon" type="weaponType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <!--Equipment that can be used to attack with-->
+    <xs:complexType name="weaponType">
+        <xs:sequence>
+            <xs:group ref="equipmentGroup"/>
+            <xs:element name="difficulty" type="xs:string"/>
+            <xs:element name="time" type="xs:string"/>
+            <xs:element name="range" type="xs:string"/>
+            <xs:element name="aoe" type="xs:string" minOccurs="0"/>
+            <xs:element name="damage" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--A list of armour-->
+    <xs:complexType name="armoursType">
+        <xs:sequence>
+            <xs:element name="armour" type="armourType" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <!--Equipment that protects a character-->
+    <xs:complexType name="armourType">
+        <xs:sequence>
+            <xs:group ref="equipmentGroup"/>
+            <xs:element name="save" type="attributeEnum"/>
+            <xs:element name="modifier" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="typeGroup">
+        <xs:sequence>
+            <xs:element name="type" type="xs:string" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:simpleType name="attributeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Physical"/>
+            <xs:enumeration value="Mental"/>
+            <xs:enumeration value="Spirit"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--If yes the thing is put in the index-->
+    <xs:attributeGroup name="indexGroup">
+        <xs:attribute name="index" default="false" type="xs:boolean"/>
+    </xs:attributeGroup>
+</xs:schema>

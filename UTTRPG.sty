@@ -1,0 +1,93 @@
+\ProvidesPackage{UTTRPG}
+
+\usepackage{import}
+
+\usepackage{cite}
+
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+%\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{tabularx}
+\usepackage{colortbl}
+
+\usepackage[margin=20mm]{geometry}
+
+\usepackage{makeidx}
+\makeindex
+
+%\usepackage{glossaries}
+%\makeglossaries
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    hidelinks,
+    breaklinks=true
+}
+
+%
+\newenvironment{action}[4]
+{%
+    \begin{tcolorbox}
+        [arc=0mm,
+        adjusted title=\begin{tabularx}{\hsize}{X|c|c|c}
+            #1 & #2 & #3 & #4\\
+        \end{tabularx},
+        box align=top,
+        width=20.5em,
+        nobeforeafter]%
+}
+{%
+    \end{tcolorbox}%
+}
+
+%
+\newenvironment{specialistAction}[4]
+{%
+    \begin{tcolorbox}
+        [arc=0mm,
+        adjusted title=\begin{tabularx}{\hsize}{X|c|c|c}
+            #1 & #2 & #3 & #4\\
+        \end{tabularx},
+        colframe=black!75!red,
+        box align=top,
+        width=20.5em,
+        nobeforeafter]%
+}
+{%
+    \end{tcolorbox}%
+}
+
+%
+\newenvironment{class}[1]
+{%
+    \begin{tcolorbox}
+        [arc=0mm,
+        adjusted title=\begin{tabularx}{\hsize}{X}
+            #1\\
+        \end{tabularx},
+        box align=top,
+        width=20.5em,
+        nobeforeafter]%
+}
+{%
+    \end{tcolorbox}%
+}
+
+%
+\newenvironment{activity}[2]
+{%
+    \begin{tcolorbox}
+        [arc=0mm,
+        adjusted title=\begin{tabularx}{\hsize}{X|c}
+            #1 & #2\\
+        \end{tabularx},
+        box align=top,
+        width=20.5em,
+        nobeforeafter]%
+}
+{%
+    \end{tcolorbox}%
+}

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
+<actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <action upgrade="$l$" difficulty="10" specialist="true">
+        <name>Telepathic Shock</name>
+        <type>Psychic, Telepathy, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Target Character within 100m must make a Mental Save or must wait 25 Time Units.</effect>
+        <upeffect>The Difficulty Count is at -1 per level and the amount of Time Units the affected Character has to wait increases by 5.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15" specialist="true">
+        <name>Telepathic Invasion</name>
+        <type>Psychic, Telepathy, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Target Character within 20m must make a Mental Save or you decide their next Action, this Action must be one they are able to do.</effect>
+        <upeffect>The Difficulty Count is at -1 per level and range is at +1 per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="5" specialist="true">
+        <name>Sensory Link</name>
+        <type>Psychic, Telepathy, Mental</type>
+        <time>25</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Target Character must make a Mental Saving Throw or  your Character invades the target Character's senses and is able to see through them for 250 Time Units.</effect>
+        <upeffect>The Difficulty Count is at -1 per level and the duration increases by 50 Time Units per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15" specialist="true">
+        <name>Illusion</name>
+        <type>Psychic, Telepathy, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Target Character within 100m must make a Mental Saving Throw or they percive an object that isn't actually there. This object looks, sounds and smells correct but is intangable to the affected Character.</effect>
+        <upeffect>The Difficulty Count is at -1 per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15" specialist="true">
+        <name>Telekinetic Levitatation</name>
+        <type>Psychic, Telekinesis, Movement, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Your Character floats up one meter into the air and you can move $2ms^{-1}$ and ignore Difficult Terrain.</effect>
+        <upeffect>The Difficulty Count is at -1 per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="10" specialist="true">
+        <name>Far Blade</name>
+        <type>Psychic, Telekinesis, Ranged, Mental</type>
+        <time>5</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>The range of target Melee Weapon becomes 100m and gains the Ranged type for 100 Time Units.</effect>
+        <upeffect>The Difficulty Count is at -1 per level, the range increases by 10m per level and the duration increases by 10 Time Units per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="10" specialist="true">
+        <name>Telekinetic Grab</name>
+        <type>Psychic, Telekinesis, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Your Character pulls target non-Character object, less than 10kg, within 100m that is not held by any other Character into your Character's hand.</effect>
+        <upeffect>The Difficulty count decreases by 1 per level and the maximum weight of the object increases by 5kg per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="10" specialist="true">
+        <name>Helping Hand</name>
+        <type>Psychic, Telekinesis, Mental</type>
+        <time>10</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Your Character equips a One Handed Weapon for 100 Time Units.</effect>
+        <upeffect>The Difficulty count decreases by 1 per level and the duration increases by 50 Time Units per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15" specialist="true">
+        <name>Clairvoyance</name>
+        <type>Psychic, Clairvoyance, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool.</cost>
+        <effect>Your Character gains a +5 modifier to your Physical Save for 100 Time Units.</effect>
+        <upeffect>The Difficulty Count is at -1 per level and duration increases by 10 Time Units per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15" specialist="true">
+        <name>Apportation</name>
+        <type>Psychic, Apportation, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool</cost>
+        <effect>Your Character teleports up to 50m away</effect>
+        <upeffect>The Difficulty Count is at -1 per level and the range is at +10m per level.</upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15" specialist="true">
+        <name>Projection</name>
+        <type>Psychic, Projection, Mental</type>
+        <time>20</time>
+        <cost>1 point from the Mental Pool</cost>
+        <effect>Your Character is able to see everything within 100m that they could normally see.</effect>
+        <upeffect>The Difficulty Count is at -1 per level and the range is at +50m per level.</upeffect>
+    </action>
+</actions>

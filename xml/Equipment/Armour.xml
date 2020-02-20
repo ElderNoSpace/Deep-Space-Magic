@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
+<armours xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <armour>
+        <name>Ballistic Jacket</name>
+        <type>Light Armour, Physical Armour, Armour</type>
+        <cost>150</cost>
+        <save>Physical</save>
+        <modifier>1</modifier>
+    </armour>
+    <armour>
+        <name>Plated Chestpeice</name>
+        <type>Medium Armour, Physical Armour, Armour</type>
+        <cost>200</cost>
+        <passiveEffect>-0.1m/s speed</passiveEffect>
+        <save>Physical</save>
+        <modifier>2</modifier>
+    </armour>
+    <armour>
+        <name>Full Cover Plating</name>
+        <type>Heavy Armour, Physical Armour, Armour</type>
+        <cost>500</cost>
+        <passiveEffect>-0.5m/s speed</passiveEffect>
+        <save>Physical</save>
+        <modifier>3</modifier>
+    </armour>
+</armours>

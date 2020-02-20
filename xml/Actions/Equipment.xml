@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
+<actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <action difficulty="0">
+        <name>Equip Weapon</name>
+        <type>Misc</type>
+        <time>10</time>
+        <effect>Your Character equips a Weapon, if the Weapon is One Handed another One Handed Weapon can be equip aswell.</effect>
+    </action>
+    <action difficulty="0">
+        <name>Unequip Weapon</name>
+        <type>Misc</type>
+        <time>10</time>
+        <effect>Your Character unequips a Weapon, if the Weapon is One Handed another One Handed Weapon can be unequip aswell.</effect>
+    </action>
+</actions>

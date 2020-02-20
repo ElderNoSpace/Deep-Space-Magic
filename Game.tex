@@ -1,0 +1,327 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\synctex=1
+
+\usepackage{UTTRPG}
+
+\title{Unified Tabletop Role Playing Game}
+
+\author{ElderNoSpace}
+
+\begin{document}
+    \frontmatter
+    \maketitle
+
+    \chapter{Copyright}
+    \section*{License}
+        The text in this work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+        
+        To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{http://creativecommons.org/licenses/by-sa/4.0/}.
+
+    \section*{Contributing}
+        %Github
+
+    \tableofcontents
+
+    \mainmatter
+    \chapter{Introduction}
+        Unified Tabletop Role Playing Game is a game for having adventures in a sci-fi world where the rules don't bog down game play but there is still depth and meaningful choices in character creation and progression.
+        
+        Most actions are determined by a die roll which enable a sense of risk, reward and progression as more effective options are harder to pull off, but become easier as the Players progress.
+
+        \index{Game Master}
+        One Player is designated as the Game Master who referees the game and takes the roll of everything other than the player characters.
+
+        This game assumes a futuristic sci-fi/fantasy game world for the Players to adventure in. Other settings can be devised but changes may have to be made. The Game Master is of course in charge of the game world.
+
+    \chapter{Playing the game}
+        There are three pillars of adventure~\cite{PlayersHandbook}: Combat, Social Encounters and Exploration. This being a system based on adventure rules detailing each of these three pillars will be detailed.
+        \section{General Rules}
+            \subsection{Game play Cycle}
+                \subsubsection{Description}
+                The Game Master will describe to the Players what the current situation is and asks them their course of action.
+
+                \subsubsection{Decision}
+                The Players decide on a course of action individually and as a group.
+            
+                \index{Action}
+                \subsubsection{Resolving Action}
+                Nearly any Action in this system has a chance of failure expressed by a roll of a twenty sided die against a Difficulty Count, if the roll plus the modifiers is higher than or equal to the count it is considered a success. In a case where an Action is against another entity that entity can make a saving throw to mitigate or ignore the negative consequences of the Action, a saving throw is resolved against a Difficulty Count with modifiers like an Action.
+
+                Actions also can have a cost that is taken before the roll takes place.
+
+                \subsubsection{Concequence}
+                Then Game Master will then describe the effects of the Players action then the cycle will repeat.
+
+                \index{Conflicting Rules}
+            \subsection{Conflicting Rules}
+                If there are conflicting rules, take the more specific rule to be true.
+
+                \index{Success Score}
+            \subsection{Success Score}
+                The current success of the Players in the given situation is governed by the Success Score, which is determined differently in each situation. If the success score gets high enough the Players are considered to have succeeded and the Players receive the boons for the challenge. If the success score gets low enough the Players are considered to have failed and negative consequences of the challenge occur.
+            
+                \index{Action Time}
+            \subsection{Timing}
+                \subsubsection{Determining Order}
+                Every Action takes an amount of time. At the start of an encounter each character involved rolls a d4 then adds the Action Time of the Action and any additional modifiers. The character with the lowest number goes first, then in order from lowest to highest.
+
+                After a character takes their Action they then roll a d4 and add the Action time with any additional modifiers. This number is added to the turn number that they took the Action in.
+
+                \subsubsection{Declaring Actions}
+                A character does not have to declare their Action at the start, they only have to declare a number to add to the roll. They can change this number of extra amount of time to wait at any time, but to no less then what would put their turn next. When it is a characters turn they can declare any Action that they have designated enough extra time for counting the Action Time and any additional modifiers.
+
+                \subsubsection{Simultaneous Actions}
+                If two Actions happen on the same turn number they both happen without counting the effect of the other Action.
+
+                \subsubsection{Management}
+                For higher numbers just take a sufficiently high modulo of the turn numbers (I suggest 25) but keep track of the current turn number and only look at turns after the current turn number.
+
+                To keep track of all this a strip with numbers 1 to 25 should be printed and the Players place tokens on their turn number. The Game Master should then look at the strip to easily work out whose turn is next.
+
+            \subsection{Role Playing}
+                For each Action a player makes they should try to describe what is happening, preferably in first person, and if the Game Master and the Players find that this description follows the Players character and is sufficient the Game Master can award anywhere from a +1 modifier to a +5 modifier depending on the quality and imaginativity of the description.
+
+            \subsection{Rest}
+                \index{Lunch Rest}
+                \subsubsection{Lunch Rest}
+                    The Players may decide to have a lunch break of 30 mins where they regain 1 hit point, 1 pool point in each pool and regain other resources that indicate they replenish on a Lunch Rest.
+
+                    Only 1 Lunch Rest can be taken in between Overnight Rests.
+                \index{Overnight Rest}
+                \subsubsection{Overnight Rest}
+                    The Players can take an Overnight Rest only when they are in a safe area. An Overnight Rest takes 8 hours where the characters must sleep. They gain all their hit points and all their pool points and any other resources that indicate they replenish on an Overnight Rest.
+        
+        \index{Combat}
+        \section{Combat Encounters}
+            \subsection{Success Score}
+                The success score of combat starts at 0. If the player's side takes damage the success score is reduced by the damage taken. If the opposition's side takes damage the success score is increased by the damage taken.
+
+                If the success score is high enough the enemy might flee or decide to talk things out.
+
+                If either side is reduced to zero hit points they automatically fail the encounter.
+
+            \subsection{Time Units}
+                Each Time Unit in a Combat Encounter is 0.2 seconds, so 5 would be one second and 25 would be 5 seconds.
+
+            \index{Surprise}
+            \subsection{Surprise}
+                If one side is unaware of the other side or is not expecting battle at the beginning of the battle the unaware or not expecting side adds a +10 modifier to the Action Time of their first Action.
+
+            \index{Melee Combat}
+            \subsection{Melee Combat}
+                If two Characters are within 1m of each other and at least one has a Melee Weapon equip, they are in Melee Combat.
+
+            \index{Movement}
+            \hypertarget{Movement}{\subsection{Movement}}
+                
+                At the beginning of a combat encounter the Game Master decides where each character should be.
+
+                \index{Difficult Terrain}
+                \subsubsection{Difficult Terrain}
+                A character can move around the battlefield with the move Action. If the terrain is difficult to move through the movement speed is halved.
+
+                \index{Dangerous Terrain}
+                \subsubsection{Dangerous Terrain}
+                If a character finishes it's movement or spends 25 time units on Dangerous Terrain it takes the negative effect of the terrain.
+
+                \index{Attacks of Opportunity}
+                \subsubsection{Attacks of Opportunity}
+                If a character leaves Melee combat with another character by using its move Action the other characters gets to take one free melee weapon attack Action against the moving character. This can be negated by adding a +10 modifier to Action Time of the movement Action.
+
+                \index{Flying}
+                \subsubsection{Flying}
+                If a character can fly it can move into the air. If not said otherwise the flying character has to move at least half it's movement every 25 Time Units or fall to the ground.
+
+                \index{Space}
+                In space all characters can fly and do not risk falling.
+
+            \subsection{Cover and Prone}
+                \index{Cover}
+                \subsubsection{Cover}
+                Most ranged attacks care about whether or not the target is behind cover. If the target is at least half covered by other objects the attackers adds a -5 modifier to the attack rolls. If the target is at least three quarters covered by terrain the attacker adds a -7 modifier to the attack rolls. If the target is completely covered there is no chance of the attack to succeed.
+
+                \index{Prone}
+                \subsubsection{Prone}
+                Being prone counts as at least half cover.
+
+            \index{Unseen Attacks}
+            \subsection{Unseen Attacks}
+                If the target of an attack is cannot be seen by the attacker, the attacker adds a -5 modifier to the attack rolls, this is only successful if the target is actually at the guessed location.
+
+                If a character that cannot be seen makes an attacking Action or any other Action that would create sufficient noise they give away their current location.
+
+            \index{Ranged Attacks}
+            \subsection{Ranged Attacks}
+                \index{Range}
+                \subsubsection{Range}
+                    When attacking a target with a Ranged attack the attack rolls is at -5 if it is longer then the stated range and if it is double the stated range the attack is considered impossible.
+
+                \subsubsection{In Melee Combat}
+                    In Melee Combat all Ranged attack rolls are at -5.
+
+            \index{Hit Points}
+            \subsection{Hit Points}
+                If a character drops to 0 hit points they fall unconscious. If a character drops to negative of their max hit points they die.
+
+            \subsection{Social Actions}
+                Social Actions can be taken in Combat Encounters but there is a -5 modifier to all Social Action rolls.
+
+                Social Actions increase and decrease Success Score of Combat Encounters as they would do Social Encounters.
+
+        \section{Social Encounters}
+            \subsection{Success Score}
+                The Success Score of a Social Encounter starts at 0. Social Actions effects will include modification to this score.
+
+                If the Success Score is high enough the opposition may decide to follow the player's requests. If the Success Score falls low enough the opposition won't be partial to the player's requests and may devolve the situation to violence.
+
+            \subsection{Time Units}
+                Each Time Unit in a Social Encounter is 0.2 seconds, so 5 would be one second and 25 would be 5 seconds.
+
+            \subsection{Predisposition}
+                When the player's opposition may be predisposed towards the Players depending on prejudice or past experiences. If there is a positive predisposition add between +1 to +3 to the rolls of each Social Action and if there is a negative predisposition add between -1 to -3 to the rolls of each Social Action.
+
+            \subsection{Role Playing}
+                \subsubsection{Bonuses}
+                Role Playing is vital for Social Encounters so positive and negative bonuses should be given out frequently to the Players. Very Effective Role Playing can also directly effect the Success Score of the encounter, such as inconsistent arguments, an ingenious lie or through clever sweet talk.
+
+                \subsubsection{Matching Actions With Roleplay}
+                    A description of an Action needs to logically match the Action that has been taken.
+
+        \index{Investigation}
+        \section{Investigation}
+            When the Players need to look for a location, find secret passages, research a topic, do a forensic investigation, solve a puzzle or just need to find a pub they need to do an investigation
+
+            \subsection{Success Score}
+                The Success Score of an Investigation usually starts at 0, but this can be higher or lower depending on extra information the Players have gathered beforehand.
+
+                If the Success Score is high enough the Players will be able to find something out about the thing they are looking for. If the Success Score falls low enough the Players may become lost, destroy a clue or some other negative effect. Sometimes there is nothing at risk and thus a low success score would not have any negative effects other than taking more time.
+
+                \subsubsection{Raising Success Score}
+                    The effects of Actions will give the players clues to solving the Investigation instead of directly affecting the Success Score for Investigations. The Success Score is increased when the Players move towards their goal by making guesses towards the Actual solution to the Investigation.
+
+            \subsection{Time Units}
+                Each Time Unit in a Investigation depends on what is trying to be done and the scale at what it is being done at. Searching for a location could have each time unit being a minute or looking for the killer could have each time unit being 0.2 minutes.
+
+        \index{Downtime}
+        \section{Downtime}
+            Between adventures filled with Combat Encounters, Social Encounters and Investigation, there is time for the Player's Characters to spend some time relaxing or improving themselves.
+
+            \subsection{Success Score}
+                Each Downtime Activity each Player's Character does has it's own Success Score. The Downtime Activity will have a Success Score determined before the Activity is taken up.
+
+            \subsection{Timing}
+                Downtime Activities do not follow usual timing rules, instead one Downtime Action can be done per Time Unit. A Time Unit for Downtime is one day.
+
+    \chapter{Character Creation and Progression}
+        \section{Creating Characters}
+            \index{Attributes}
+            \subsection{Attributes}
+                \index{Physical}
+                \subsubsection{Physical}
+                    The Physical Attribute represents a Character's overall physical prowess. It is used for fighting with weapons.
+                \index{Mental}
+                \subsubsection{Mental}
+                    The Mental Attribute represents a Character's intelligence and charisma. It is used for using technical equipment, Technomancy, Thaumaturgy and Alchemy.
+                \index{Spirit}
+                \subsubsection{Spirit}
+                    The Spirit represents a Character's stubbornness, refusal to yeld and toughness. It is used for calculating Hit Points and Psychic powers.
+                \subsubsection{Values}
+                    A normal human has all his/her Attributes at 1. For the initial value for Player Characters is 1 in two and 2 in one Attribute of the Player's choice.
+            \index{Hit Points}
+            \subsection{Hit Points}
+                Hit Points represent a Character's ability to withstand damage and continue through the pain of injuries. The starting value is 1 + Spirit.
+            \index{Saving Throw}
+            \subsection{Saving Throws}
+                There are three Saving Throws, Physical, Mental and Spiritual. Each Saving Throw has a base Difficulty count of 20 - the respective modifier. The base saving throw can be changed by equipping Equipment that change the base Saving Throw. Each Attribute gives a negative modifier to the corresponding Saving Throw's Difficult Count.
+            \index{Pool Points}
+            \subsection{Pool Points}
+                Some Actions can take an extra toll on the character that takes it and as a result they are left somewhat drained after the Action. There are three pools: the Physical Pool, the Mental Pool and the Spirit Pool. Each pool has pool points that Actions may use, Actions made by the character may not use more pool points then are currently in the pool. If an external source would put a pool to negative points it is reduced to zero instead.
+                \subsubsection{Physical}
+                    The Physical Pool starts with Physical points.
+                \subsubsection{Mental}
+                    The Mental Pool starts with Mental points.
+                \subsubsection{Spirit}
+                    The Spirit Pool starts with Spirit points.
+            \subsection{Speed}
+                Each human Character has a base speed of $1ms^{-1}$, $60m$ per minute, $3.6kmh^{-1}$.
+            \subsection{Starting Actions}
+                Each Player Character starts with 5 Upgrade Points.
+            \subsection{Starting Equipment}
+                Each Player Character starts with 250 currency worth of Equipment.
+        \section{Progressing Characters}
+            \subsection{Acquiring and Improving Actions}
+                \index{Upgrade Points}
+                \subsubsection{Upgrade Points}
+                    Upgrade points enable characters to improve in their Actions and acquire new ones.
+                \subsubsection{Spending Upgrade Points}
+                    Each upgradeable Action has an upgrade cost, you need to spend Upgrade Points equal the number indicated, replacing $l$ with the next level. This can only be done during Downtime.
+                \subsubsection{Earning Upgrade Points}
+                    Upgrade Points are earned every 100xp points.
+            \index{Classes}
+            \subsection{Classes}
+                Classes can be earned by obtaining a certain level on select Actions. These provide interesting buffs that can provide Players with a guide to spending their Upgrade Points.
+            \subsection{Acquiring Equipment}
+                Equipment with a cost listed can be acquired from stores. Bartering is possible and is resolved by a Social Encounter.
+
+    \chapter{Options}
+        \index{Actions}
+        \section{Actions}
+            \index{Improvised Actions}
+            \subsubsection{Improvised Actions}
+                This list of Actions is no where near comprehensive and if a any character decides to do something not close to what is listed, the Game Master should think up a reasonable Action (Specialist, Cost, Time, Chance, Effect) for the situation.
+
+            \index{Specilist}
+            \subsubsection{Specialist}
+                Any Action that is not denoted as Specialist can be done by any character but at the lowest listed chance. If the Action is Specialist it cannot be done by any character who has not spent any upgrade points into it.
+
+            \subsubsection{Alteration Actions}
+                These actions do not have a Action Time, instead they have an Action Time Modifier. They alter another action altering the effect, the cost and/or the Difficulty Count rather than having their own independent effect.
+
+            \subsubsection{Action Formatting}
+                The formatting of an Action has the heading consisting of: Name $\vert$ Action Time $\vert$ Difficulty Count $\vert$ Upgrade Cost then the body describing the cost then the effect then the upgrade effect.
+
+            \import{xml/Actions/}{Actions.tex}
+                
+        \index{Classes}
+        \section{Classes}
+        \index{Equipment}
+        \section{Equipment}
+            \subsection{Encumbrance}
+                Each Character can only hold ($20 + 5\times$Physical)kg of weight.
+
+            \import{xml/Equipment/}{Equipment.tex}
+        \section{Downtime Activities}
+            \import{xml/DowntimeActivities/}{DowntimeActivities.tex}
+
+    \chapter{Game Master Advice}
+        \section{Combat Encounters}
+            \subsection{Success Score}
+                \subsubsection{Morale}
+                    Take the Morale Score of the Character with the highest Morale as the Success Score needed for the Players to succeed.
+        \section{Social Encounters}
+
+        \section{Investigation}
+            \subsection{Success Score}
+                \subsubsection{No Failure Condition}
+                    For an Investigation with no failure condition place a minimum on the Success Score so the Players don't get an incredibly low Success Score and spend lots of time trying to recover to 0.
+
+            \subsection{Maps}
+                A map or flow chat is use full to track the options available to the Players as they go closer towards their goal.
+
+        \section{Legendary Items and Equipment}
+        \section{Bestiary}
+            %Ortri -Norse -Triceratops warriors -Heat melee weapons, ballistic weapons +1,-1,0
+            %Screlf -Egyptian Architecture, rigid society -Scarab theocracy -Beam melee weapons, Laser weapons 0,+1,-1
+            %Gnobot -Gothic Architecture -Monarchy -Rail Weapons +1,0,-1
+            %Drrat -Rats -Scavengers -Any weapons -1,0,+1
+
+            %Dragon, infected mech
+
+    \appendix
+
+    \backmatter
+    \bibliography{Game}{}
+    \bibliographystyle{plain}
+    %\printglossaries
+    \printindex
+\end{document}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?>
+<weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <weapon>
+        <name>Metal Sword</name>
+        <type>Sword, Melee</type>
+        <cost>25</cost>
+        <difficulty>15</difficulty>
+        <time>20</time>
+        <range>1</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Heat Sword</name>
+        <type>Heat, Sword, Melee</type>
+        <cost>50</cost>
+        <difficulty>20</difficulty>
+        <time>20</time>
+        <range>1</range>
+        <damage>2</damage>
+    </weapon>
+    <weapon>
+        <name>Heat Axe</name>
+        <type>Heat, Axe, Melee</type>
+        <cost>75</cost>
+        <difficulty>15</difficulty>
+        <time>35</time>
+        <range>1</range>
+        <damage>2</damage>
+    </weapon>
+    <weapon>
+        <name>Long Beam Sword</name>
+        <type>Beam, Sword, Melee</type>
+        <cost>50</cost>
+        <difficulty>13</difficulty>
+        <time>20</time>
+        <range>1</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Short Beam Sword</name>
+        <type>Beam, Sword, Melee</type>
+        <cost>50</cost>
+        <difficulty>15</difficulty>
+        <time>15</time>
+        <range>1</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Force Sword</name>
+        <type>Force, Sword, Melee</type>
+        <cost>75</cost>
+        <passiveEffect>Push the enemy 1d6 meters on hit, before Saving Throw.</passiveEffect>
+        <difficulty>15</difficulty>
+        <time>20</time>
+        <range>1</range>
+        <damage>1</damage>
+    </weapon>
+</weapons>

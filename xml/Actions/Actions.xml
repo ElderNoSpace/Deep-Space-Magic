@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?>
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <category>
+        <index>Generic Actions</index>
+        <name>Generic</name>
+        <subcategory>
+            <name>Movement</name>
+            <subdoc ref="Movement.xml" />
+        </subcategory>
+        <subcategory>
+            <name>Equipment</name>
+            <subdoc ref="Equipment.xml" />
+        </subcategory>
+    </category>
+    <category>
+        <index>Combat Actions</index>
+        <name>Combat</name>
+        <subcategory>
+            <name>Ranged Weaponry</name>
+            <subdoc ref="RangedWeaponry.xml" />
+        </subcategory>
+        <subcategory>
+            <name>Alchemy</name>
+            <subdoc ref="Alchemy.xml" />
+        </subcategory>
+        <subcategory>
+            <name>Psychic</name>
+            <subdoc ref="Psychic.xml" />
+        </subcategory>
+        <!--%Technomancy
+            %Thaumaturgy
+            %Red Crystals -Evil and always a hidden cost-->
+    </category>
+    <category>
+        <index>Social Actions</index>
+        <name>Social</name>
+    </category>
+    <category>
+        <index>Investigation Actions</index>
+        <name>Investigation</name>
+    </category>
+    <category>
+        <index>Downtime Actions</index>
+        <name>Downtime</name>
+        <description>
+            Each Downtime Action has an associated Downtime Activity. The effect listed is for the completion of the Downtime Activity, a successful Downtime Action will increase the Success Score of the associated Downtime Activity by 1.
+
+            Downtime Actions have the total Success Score needed for the completion of the associated Downtime Activity at the bottom of the Action.
+        </description>
+        <subcategory>
+            <name>Crafting</name>
+            <reftex ref="../temp/Actions/Weapons.tex"/>
+        </subcategory>
+        <subcategory>
+            <name>Gambling</name>
+            <reftex ref="../temp/Actions/Gambling.tex"/>
+        </subcategory>
+    </category>
+    <!--<category>
+        <index>Equipment Actions</index>
+        <name>Equipment</name>
+        <subcategory>
+            <index>Ranged Weapon Action</index>
+            <name>Ranged Weapon</name>
+            <reftex ref="../temp/Actions/RangedWeapons.tex"/>
+        </subcategory>
+    </category>-->
+</section>

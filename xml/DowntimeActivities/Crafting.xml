@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-sylesheet type="text/xsl" href="../Converter.xsl"?>
+<downtime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <activity>
+        <name>Create Simple Melee Weapon</name>
+        <type>Crafting</type>
+        <score>3</score>
+        <effect>Creates a Simple Melee Weapon.</effect>
+        <actions>
+            <action difficulty="15" upgrade="$l$" specialist="true">
+                <name>Create Melee Weapon</name>
+                <type>Crafting</type>
+                <cost>One half the total market value of the weapon to be crafted is needed.</cost>
+                <effect>
+                    +1 Success Score
+                </effect>
+                <upeffect>The difficulty count is at -1 per level.</upeffect>
+            </action>
+        </actions>
+    </activity>
+</downtime>

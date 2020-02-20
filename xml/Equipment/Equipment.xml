@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?>
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <category>
+        <index>Weaponry</index>
+        <name>Weaponry</name>
+        <subcategory>
+            <index>Ranged Weapons</index>
+            <name>Ranged Weapons</name>
+            <subdoc ref="RangedWeapons.xml"/>
+        </subcategory>
+        <subcategory>
+            <index>Grenades</index>
+            <name>Grenades</name>
+            <subdoc ref="Grenades.xml"/>
+        </subcategory>
+        <subcategory>
+            <index>Melee Weapons</index>
+            <name>Melee Weapons</name>
+            <subdoc ref="MeleeWeapons.xml"/>
+        </subcategory>
+    </category>
+    <category>
+        <index>Armour</index>
+        <name>Armour</name>
+        <subdoc ref="Armour.xml"/>
+    </category>
+    <category>
+        <index>Vehicles</index>
+        <name>Vehicles</name>
+        <description>
+            Vehicles are treated as a Character but need other Non-Vehicle Characters to use their Actions to pilot, gun, repair, ect. the Vehicle.
+        </description>
+    </category>
+</section>

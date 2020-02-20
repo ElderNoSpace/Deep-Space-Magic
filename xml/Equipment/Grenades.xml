@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?>
+<weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <weapon>
+        <name>Frag Grenade</name>
+        <type>Grenade, Throw, Ballistic, Ranged</type>
+        <cost>5</cost>
+        <passiveEffect>Ignores Cover</passiveEffect>
+        <difficulty>15</difficulty>
+        <time>15</time>
+        <range>50</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Plasma Grenade</name>
+        <type>Grenade, Throw, Plasma, Ranged</type>
+        <cost>10</cost>
+        <passiveEffect>Ignores Cover</passiveEffect>
+        <difficulty>15</difficulty>
+        <time>15</time>
+        <range>10m radius at 50</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Force Grenade</name>
+        <type>Force, Grenade, Throw, Ranged</type>
+        <cost>5</cost>
+        <passiveEffect>Ignores Cover, pushes target on hit 5m in any direction</passiveEffect>
+        <difficulty>15</difficulty>
+        <time>15</time>
+        <range>50</range>
+        <damage>1</damage>
+    </weapon>
+    <weapon>
+        <name>Laser Grenade</name>
+        <type>Grenade, Throw, Laser, Ranged</type>
+        <cost>15</cost>
+        <passiveEffect>Ignores Cover, target must wait 25 time units on a failed Physical save.</passiveEffect>
+        <difficulty>20</difficulty>
+        <time>10</time>
+        <range>100</range>
+        <damage>0</damage>
+    </weapon>
+</weapons>

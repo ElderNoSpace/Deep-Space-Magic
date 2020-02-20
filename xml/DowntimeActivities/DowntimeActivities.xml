@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../Converter.xsl"?>
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <category>
+        <index>Crafting</index>
+        <name>Crafting</name>
+        <subcategory>
+            <name>Weapons</name>
+            <subdoc ref="Crafting.xml"/>
+        </subcategory>
+    </category>
+    <category>
+        <index>Gambling</index>
+        <name>Gambling</name>
+        <subdoc ref="Gambling.xml"/>
+    </category>
+</section>
