@@ -2,6 +2,8 @@
 xml/*/*.tex
 xml/temp/
 
+.DS_Store
+
 *.aux
 *.blg
 *.fdb_latexmk
