@@ -3,7 +3,7 @@
 <weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <weapon>
         <name>Metal Sword</name>
-        <type>Sword, Melee</type>
+        <type>Sword, Melee, Simple</type>
         <cost>25</cost>
         <difficulty>15</difficulty>
         <time>20</time>
