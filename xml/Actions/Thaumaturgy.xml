@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
+<actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <action upgrade="$l$" difficulty="5" specialist="true">
+        <name>Recharge Cell</name>
+        <type>Thaumaturgy, Mental</type>
+        <cost>1 Point from the Mental pool and take 1 damage</cost>
+        <effect>Completely refill 1 Cell.</effect>
+        <upeffect>Decrease difficulty by 1 per level, every 5 levels increase Cells refilled by 1.</upeffect>
+    </action>
+</actions>

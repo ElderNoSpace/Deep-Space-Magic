@@ -28,8 +28,15 @@
             <name>Psychic</name>
             <subdoc ref="Psychic.xml" />
         </subcategory>
-        <!--%Technomancy
-            %Thaumaturgy
+        <subcategory>
+            <name>Technomancy</name>
+            <subdoc ref="Technomancy.xml" />
+        </subcategory>
+        <subcategory>
+            <name>Thaumaturgy</name>
+            <subdoc ref="Thaumaturgy.xml" />
+        </subcategory>
+        <!--%Thaumaturgy
             %Red Crystals -Evil and always a hidden cost-->
     </category>
     <category>
