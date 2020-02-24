@@ -3,7 +3,10 @@
 <weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <weapon>
         <name>Frag Grenade</name>
-        <type>Grenade, Throw, Ballistic, Ranged</type>
+        <type>Grenade</type>
+        <type>Throw</type>
+        <type>Ballistic</type>
+        <type>Ranged</type>
         <cost>5</cost>
         <passiveEffect>Ignores Cover</passiveEffect>
         <difficulty>15</difficulty>
@@ -13,7 +16,10 @@
     </weapon>
     <weapon>
         <name>Plasma Grenade</name>
-        <type>Grenade, Throw, Plasma, Ranged</type>
+        <type>Grenade</type>
+        <type>Throw</type>
+        <type>Plasma</type>
+        <type>Ranged</type>
         <cost>10</cost>
         <passiveEffect>Ignores Cover</passiveEffect>
         <difficulty>15</difficulty>
@@ -23,7 +29,10 @@
     </weapon>
     <weapon>
         <name>Force Grenade</name>
-        <type>Force, Grenade, Throw, Ranged</type>
+        <type>Force</type>
+        <type>Grenade</type>
+        <type>Throw</type>
+        <type>Ranged</type>
         <cost>5</cost>
         <passiveEffect>Ignores Cover, pushes target on hit 5m in any direction</passiveEffect>
         <difficulty>15</difficulty>
@@ -33,7 +42,10 @@
     </weapon>
     <weapon>
         <name>Laser Grenade</name>
-        <type>Grenade, Throw, Laser, Ranged</type>
+        <type>Grenade</type>
+        <type>Throw</type>
+        <type>Laser</type>
+        <type>Ranged</type>
         <cost>15</cost>
         <passiveEffect>Ignores Cover, target must wait 25 time units on a failed Physical save.</passiveEffect>
         <difficulty>20</difficulty>

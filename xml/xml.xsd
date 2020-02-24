@@ -226,9 +226,71 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     <xs:group name="typeGroup">
         <xs:sequence>
-            <xs:element name="type" type="xs:string" maxOccurs="unbounded"/>
+            <xs:element name="type" type="typeEnum" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:group>
+
+    <xs:simpleType name="typeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Simple"/>
+            <xs:enumeration value="Misc"/>
+
+            <xs:enumeration value="Movement"/>
+            <xs:enumeration value="Shoot"/>
+            <xs:enumeration value="Throw"/>
+
+            <xs:enumeration value="Physical"/>
+            
+            <xs:enumeration value="Mental"/>
+
+            <xs:enumeration value="Alchemy"/>
+            <xs:enumeration value="Kinetic"/>
+            <xs:enumeration value="Light"/>
+            <xs:enumeration value="Eletric"/>
+            <xs:enumeration value="Fire"/>
+
+            <xs:enumeration value="Psychic"/>
+            <xs:enumeration value="Telepathy"/>
+            <xs:enumeration value="Telekinesis"/>
+            <xs:enumeration value="Clairvoyance"/>
+            <xs:enumeration value="Apportation"/>
+            <xs:enumeration value="Projection"/>
+
+            <xs:enumeration value="Technomancy"/>
+            <xs:enumeration value="Hacking"/>
+            <xs:enumeration value="Release"/>
+            
+            <xs:enumeration value="Thaumaturgy"/>
+
+            <xs:enumeration value="Melee"/>
+            <xs:enumeration value="Sword"/>
+            <xs:enumeration value="Axe"/>
+            <xs:enumeration value="Heat"/>
+            <xs:enumeration value="Beam"/>
+            <xs:enumeration value="Force"/>
+
+            <xs:enumeration value="Ranged"/>
+            <xs:enumeration value="Rapid Fire"/>
+            <xs:enumeration value="One Handed"/>
+            <xs:enumeration value="Pistol"/>
+            <xs:enumeration value="Ballistic"/>
+            <xs:enumeration value="Laser"/>
+            <xs:enumeration value="Rail"/>
+            <xs:enumeration value="Missile"/>
+            <xs:enumeration value="Plasma"/>
+
+            <xs:enumeration value="Armour"/>
+            <xs:enumeration value="Physical Armour"/>
+            <xs:enumeration value="Light Armour"/>
+            <xs:enumeration value="Medium Armour"/>
+            <xs:enumeration value="Heavy Armour"/>
+
+            <xs:enumeration value="Grenade"/>
+
+            <xs:enumeration value="Crafting"/>
+            <xs:enumeration value="Luck"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="attributeEnum">
         <xs:restriction base="xs:string">

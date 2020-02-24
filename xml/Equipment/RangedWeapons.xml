@@ -3,7 +3,11 @@
 <weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <weapon>
         <name>Ballistic Pistol</name>
-        <type>One handed, Ballistic, Pistol, Shoot, Ranged</type>
+        <type>One Handed</type>
+        <type>Ballistic</type>
+        <type>Pistol</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>60</cost>
         <passiveEffect></passiveEffect>
         <difficulty>15</difficulty>
@@ -13,7 +17,11 @@
     </weapon>
     <weapon>
         <name>Laser Pistol</name>
-        <type>One handed, Laser, Pistol, Shoot, Ranged</type>
+        <type>One Handed</type>
+        <type>Laser</type>
+        <type>Pistol</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>85</cost>
         <passiveEffect></passiveEffect>
         <difficulty>15</difficulty>
@@ -23,7 +31,11 @@
     </weapon>
     <weapon>
         <name>Rail Pistol</name>
-        <type>One handed, Rail, Pistol, Shoot, Ranged</type>
+        <type>One Handed</type>
+        <type>Rail</type>
+        <type>Pistol</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>85</cost>
         <passiveEffect></passiveEffect>
         <difficulty>15</difficulty>
@@ -33,7 +45,11 @@
     </weapon>
     <weapon>
         <name>Missile Pistol</name>
-        <type>One handed, Missile, Pistol, Shoot, Ranged</type>
+        <type>One Handed</type>
+        <type>Missile</type>
+        <type>Pistol</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>60</cost>
         <passiveEffect></passiveEffect>
         <difficulty>20</difficulty>
@@ -43,7 +59,11 @@
     </weapon>
     <weapon>
         <name>Plasma Pistol</name>
-        <type>One handed, Plasma, Pistol, Shoot, Ranged</type>
+        <type>One Handed</type>
+        <type>Plasma</type>
+        <type>Pistol</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>110</cost>
         <passiveEffect></passiveEffect>
         <difficulty>10</difficulty>
@@ -54,7 +74,9 @@
     </weapon>
     <weapon>
         <name>Ballistic Rifle</name>
-        <type>Ballistic, Shoot, Ranged</type>
+        <type>Ballistic</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>50</cost>
         <difficulty>15</difficulty>
         <time>20</time>
@@ -63,7 +85,9 @@
     </weapon>
     <weapon>
         <name>Laser Rifle</name>
-        <type>Laser, Shoot, Ranged</type>
+        <type>Laser</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>75</cost>
         <difficulty>15</difficulty>
         <time>18</time>
@@ -72,7 +96,9 @@
     </weapon>
     <weapon>
         <name>Rail Rifle</name>
-        <type>Rail Shoot, Ranged</type>
+        <type>Rail</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>75</cost>
         <difficulty>15</difficulty>
         <time>23</time>
@@ -81,7 +107,9 @@
     </weapon>
     <weapon>
         <name>Missile Gun</name>
-        <type>Missile, Shoot, Ranged</type>
+        <type>Missile</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>50</cost>
         <difficulty>20</difficulty>
         <time>25</time>
@@ -90,7 +118,9 @@
     </weapon>
     <weapon>
         <name>Plasma Gun</name>
-        <type>Plasma, Shoot, Ranged</type>
+        <type>Plasma</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>100</cost>
         <difficulty>10</difficulty>
         <time>20</time>
@@ -100,7 +130,10 @@
     </weapon>
     <weapon>
         <name>Light Machine Gun</name>
-        <type>Rapid Fire, Ballistic, Shoot, Ranged</type>
+        <type>Rapid Fire</type>
+        <type>Ballistic</type>
+        <type>Shoot</type>
+        <type>Ranged</type>
         <cost>150</cost>
         <difficulty>15</difficulty>
         <time>15</time>

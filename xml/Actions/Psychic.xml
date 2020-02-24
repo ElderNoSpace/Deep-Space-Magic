@@ -3,7 +3,9 @@
 <actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Telepathic Shock</name>
-        <type>Psychic, Telepathy, Mental</type>
+        <type>Psychic</type>
+        <type>Telepathy</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Character within 100m must make a Mental Save or must wait 25 Time Units.</effect>
@@ -11,7 +13,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Telepathic Invasion</name>
-        <type>Psychic, Telepathy, Mental</type>
+        <type>Psychic</type>
+        <type>Telepathy</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Character within 20m must make a Mental Save or you decide their next Action, this Action must be one they are able to do.</effect>
@@ -19,7 +23,9 @@
     </action>
     <action upgrade="$l$" difficulty="5" specialist="true">
         <name>Sensory Link</name>
-        <type>Psychic, Telepathy, Mental</type>
+        <type>Psychic</type>
+        <type>Telepathy</type>
+        <type>Mental</type>
         <time>25</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Character must make a Mental Saving Throw or  your Character invades the target Character's senses and is able to see through them for 250 Time Units.</effect>
@@ -27,7 +33,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Illusion</name>
-        <type>Psychic, Telepathy, Mental</type>
+        <type>Psychic</type>
+        <type>Telepathy</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Character within 100m must make a Mental Saving Throw or they percive an object that isn't actually there. This object looks, sounds and smells correct but is intangable to the affected Character.</effect>
@@ -35,7 +43,10 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Telekinetic Levitatation</name>
-        <type>Psychic, Telekinesis, Movement, Mental</type>
+        <type>Psychic</type>
+        <type>Telekinesis</type>
+        <type>Movement</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Your Character floats up one meter into the air and you can move $2ms^{-1}$ and ignore Difficult Terrain.</effect>
@@ -43,7 +54,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Far Blade</name>
-        <type>Psychic, Telekinesis, Ranged, Mental</type>
+        <type>Psychic</type>
+        <type>Telekinesis</type>
+        <type>Ranged</type>
+        <type>Mental</type>
         <time>5</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>The range of target Melee Weapon becomes 100m and gains the Ranged type for 100 Time Units.</effect>
@@ -51,7 +65,9 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Telekinetic Grab</name>
-        <type>Psychic, Telekinesis, Mental</type>
+        <type>Psychic</type>
+        <type>Telekinesis</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Your Character pulls target non-Character object, less than 10kg, within 100m that is not held by any other Character into your Character's hand.</effect>
@@ -59,7 +75,9 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Helping Hand</name>
-        <type>Psychic, Telekinesis, Mental</type>
+        <type>Psychic</type>
+        <type>Telekinesis</type>
+        <type>Mental</type>
         <time>10</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Your Character equips a One Handed Weapon for 100 Time Units.</effect>
@@ -67,7 +85,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Clairvoyance</name>
-        <type>Psychic, Clairvoyance, Mental</type>
+        <type>Psychic</type>
+        <type>Clairvoyance</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Your Character gains a +5 modifier to your Physical Save for 100 Time Units.</effect>
@@ -75,7 +95,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Apportation</name>
-        <type>Psychic, Apportation, Mental</type>
+        <type>Psychic</type>
+        <type>Apportation</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Your Character teleports up to 50m away</effect>
@@ -83,7 +105,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Projection</name>
-        <type>Psychic, Projection, Mental</type>
+        <type>Psychic</type>
+        <type>Projection</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Your Character is able to see everything within 100m that they could normally see.</effect>

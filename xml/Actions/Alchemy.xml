@@ -3,7 +3,9 @@
 <actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Kinetic Shot</name>
-        <type>Alchemy, Kinetic, Mental</type>
+        <type>Alchemy</type>
+        <type>Kinetic</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Target Character within 100m must make a Physical Save or be pushed back 15m and take 1 damage.</effect>
@@ -11,7 +13,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Kinetic Blast</name>
-        <type>Alchemy, Kinetic, Mental</type>
+        <type>Alchemy</type>
+        <type>Kinetic</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>All Characters in a 45$^{\circ}$ cone 50m must make a Physical Save or take 1 damage.</effect>
@@ -19,7 +23,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Forceful Blade</name>
-        <type>Alchemy, Kinetic, Mental, Melee</type>
+        <type>Alchemy</type>
+        <type>Kinetic</type>
+        <type>Mental</type>
+        <type>Melee</type>
         <time>10</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>For the next 50 Time Units when your Character hits with a Melee Weapon Attack the Target Character suffers a -1 to the Saving Throw</effect>
@@ -27,7 +34,10 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Forceful Shot</name>
-        <type>Alchemy, Kinetic, Ranged, Mental</type>
+        <type>Alchemy</type>
+        <type>Kinetic</type>
+        <type>Ranged</type>
+        <type>Mental</type>
         <time>10</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>For the next 50 Time Units when your Character hits with a Ranged Weapon Attack using a Ballistic or Rail weapon the Target Character suffers a -1 to the Saving Throw</effect>
@@ -35,7 +45,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Kinetic Jump</name>
-        <type>Alchemy, Kinetic, Movement, Mental</type>
+        <type>Alchemy</type>
+        <type>Kinetic</type>
+        <type>Movement</type>
+        <type>Mental</type>
         <time>30</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Jump over things from a minimum of 50m to a maximum of 100m.</effect>
@@ -43,7 +56,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Light Shot</name>
-        <type>Alchemy, Light, Mental</type>
+        <type>Alchemy</type>
+        <type>Light</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Target Character within 200m must make a Physical Save or take 1 damage.</effect>
@@ -51,7 +66,9 @@
     </action>
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Light Blast</name>
-        <type>Alchemy, Light, Mental</type>
+        <type>Alchemy</type>
+        <type>Light</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>All Characters in a 75m line must make a Physical Save or take 1 damage.</effect>
@@ -59,7 +76,9 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Blinding Light</name>
-        <type>Alchemy, Light, Mental</type>
+        <type>Alchemy</type>
+        <type>Light</type>
+        <type>Mental</type>
         <time>15</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Target Character within 150m must make a Mental Saving Throw or suffer a -5 to all Difficulty Count Rolls for the next 100 Time Units</effect>
@@ -67,7 +86,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Eletric Shot</name>
-        <type>Alchemy, Eletric, Mental</type>
+        <type>Alchemy</type>
+        <type>Eletric</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Target Character within 100m must make a Physical Save or have to wait 5 Time Units and take 1 damage.</effect>
@@ -75,7 +96,9 @@
     </action>
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Eletric Arc</name>
-        <type>Alchemy, Eletric, Mental</type>
+        <type>Alchemy</type>
+        <type>Eletric</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Target Character within 75m must make a Physical Save or take 1 damage. Each time a Character takes damage from this Action the nearest Character that has not been effected by it must make a Physical Save or take 1 damage</effect>
@@ -83,7 +106,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Rail Shot</name>
-        <type>Alchemy, Eletric, Ranged, Mental</type>
+        <type>Alchemy</type>
+        <type>Eletric</type>
+        <type>Ranged</type>
+        <type>Mental</type>
         <time>+5</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Modifies Shoot Ranged Weapon Action Range by +25m of a Ballistic Weapon.</effect>
@@ -91,7 +117,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Lightning Throwing</name>
-        <type>Alchemy, Eletric, Ranged, Mental</type>
+        <type>Alchemy</type>
+        <type>Eletric</type>
+        <type>Ranged</type>
+        <type>Mental</type>
         <time>5</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>For 50 Time Units a spear of lightning Appears in your Character's hand which has Difficulty Count 15, Time 10, Range 100, Damage 1.</effect>
@@ -99,7 +128,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Fire Shot</name>
-        <type>Alchemy, Fire, Mental</type>
+        <type>Alchemy</type>
+        <type>Fire</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>Target Character within 50m must make a Physical Save or take 2 damage.</effect>
@@ -107,7 +138,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Fire Blast</name>
-        <type>Alchemy, Fire, Mental</type>
+        <type>Alchemy</type>
+        <type>Fire</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>All Characters in a 10m radius circle at 75m must make a Physical Save or take 1 damage.</effect>
@@ -115,7 +148,9 @@
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Flame Grenade</name>
-        <type>Alchemy, Fire, Mental</type>
+        <type>Alchemy</type>
+        <type>Fire</type>
+        <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>All Characters in a 5m radius circle at 50m must make a Physical Save or take 1 damage, ignores Cover.</effect>
@@ -123,7 +158,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Flame Blade</name>
-        <type>Alchemy, Fire, Melee, Mental</type>
+        <type>Alchemy</type>
+        <type>Fire</type>
+        <type>Melee</type>
+        <type>Mental</type>
         <time>5</time>
         <cost>1 point from the Mental Pool</cost>
         <effect>For 50 Time Units a blade of fire Appears in your Character's hand which has Difficulty Count 15, Time 15, Range 1, Damage 2 and is always a Melee Weapon.</effect>

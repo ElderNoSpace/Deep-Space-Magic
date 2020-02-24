@@ -3,7 +3,9 @@
 <actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Lockdown</name>
-        <type>Technomancy, Hacking, Mental</type>
+        <type>Technomancy</type>
+        <type>Hacking</type>
+        <type>Mental</type>
         <time>15</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>For 25 Time Units target Item that is not Simple cannot be used.</effect>
@@ -11,14 +13,21 @@
     </action>
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Backfire</name>
-        <type>Technomancy, Hacking, Mental</type>
+        <type>Technomancy</type>
+        <type>Hacking</type>
+        <type>Mental</type>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Character with a Weapon that is not Simple equiped within 100m must make a Mental Saving Throw or take 1 damage.</effect>
         <upeffect>Difficultyy Count reduces by 1 per level.</upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Beam Sword Length Liberation</name>
-        <type>Technomancy, Release, Beam, Sword, Melee, Mental</type>
+        <type>Technomancy</type>
+        <type>Release</type>
+        <type>Beam</type>
+        <type>Sword</type>
+        <type>Melee</type>
+        <type>Mental</type>
         <time>10</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>For 100 Time Units target Beam Sword's Range increases by 1</effect>
@@ -26,7 +35,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Rapid Fire Release</name>
-        <type>Technomancy, Realease, Rapid Fire, Mental</type>
+        <type>Technomancy</type>
+        <type>Release</type>
+        <type>Rapid Fire</type>
+        <type>Mental</type>
         <time>10</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Shoot Weapon gains Rapid Fire for 100 Time Units</effect>
@@ -34,7 +46,10 @@
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Force Distance Extension</name>
-        <type>Technomancy, Realease, Force, Mental</type>
+        <type>Technomancy</type>
+        <type>Release</type>
+        <type>Force</type>
+        <type>Mental</type>
         <time>10</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>Target Force Weapon that pushes Characters pushes that Character an extra 1d4m for 100 Time Units.</effect>

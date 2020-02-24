@@ -26,7 +26,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 --><xsl:otherwise>&#8211;</xsl:otherwise><!--
 --></xsl:choose>}<!--
 -->{<xsl:value-of select="@difficulty"/>}{<xsl:value-of select="@upgrade"/>}
-    \textit{<xsl:value-of select="type"/>}\\
+    \textit{<xsl:apply-templates select="type"/>}\\
     \rule{\hsize}{0.4pt}
     <xsl:if test="cost">
     <xsl:value-of select="cost"/>

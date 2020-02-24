@@ -11,6 +11,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" media-type="application/x-latex"/>
 
+<xsl:import href="common.xsl"/>
 <xsl:import href="action.xsl"/>
 <xsl:import href="equipment.xsl"/>
 <xsl:import href="downtime.xsl"/>

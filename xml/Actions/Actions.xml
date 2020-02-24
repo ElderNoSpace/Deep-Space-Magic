@@ -36,8 +36,7 @@
             <name>Thaumaturgy</name>
             <subdoc ref="Thaumaturgy.xml" />
         </subcategory>
-        <!--%Thaumaturgy
-            %Red Crystals -Evil and always a hidden cost-->
+        <!--%Red Crystals -Evil and always a hidden cost-->
     </category>
     <category>
         <index>Social Actions</index>

@@ -25,11 +25,12 @@
         <name>Armour</name>
         <subdoc ref="Armour.xml"/>
     </category>
-    <category>
+    <!--<category>
         <index>Vehicles</index>
         <name>Vehicles</name>
         <description>
             Vehicles are treated as a Character but need other Non-Vehicle Characters to use their Actions to pilot, gun, repair, ect. the Vehicle.
         </description>
-    </category>
+        <subdoc ref="Vehicles.xml" />
+    </category>-->
 </section>

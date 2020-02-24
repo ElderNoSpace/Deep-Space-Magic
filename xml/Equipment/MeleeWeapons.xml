@@ -3,7 +3,9 @@
 <weapons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
     <weapon>
         <name>Metal Sword</name>
-        <type>Sword, Melee, Simple</type>
+        <type>Sword</type>
+        <type>Melee</type>
+        <type>Simple</type>
         <cost>25</cost>
         <difficulty>15</difficulty>
         <time>20</time>
@@ -12,7 +14,9 @@
     </weapon>
     <weapon>
         <name>Heat Sword</name>
-        <type>Heat, Sword, Melee</type>
+        <type>Heat</type>
+        <type>Sword</type>
+        <type>Melee</type>
         <cost>50</cost>
         <difficulty>20</difficulty>
         <time>20</time>
@@ -21,7 +25,9 @@
     </weapon>
     <weapon>
         <name>Heat Axe</name>
-        <type>Heat, Axe, Melee</type>
+        <type>Heat</type>
+        <type>Axe</type>
+        <type>Melee</type>
         <cost>75</cost>
         <difficulty>15</difficulty>
         <time>35</time>
@@ -30,7 +36,9 @@
     </weapon>
     <weapon>
         <name>Long Beam Sword</name>
-        <type>Beam, Sword, Melee</type>
+        <type>Beam</type>
+        <type>Sword</type>
+        <type>Melee</type>
         <cost>50</cost>
         <difficulty>13</difficulty>
         <time>20</time>
@@ -39,7 +47,9 @@
     </weapon>
     <weapon>
         <name>Short Beam Sword</name>
-        <type>Beam, Sword, Melee</type>
+        <type>Beam</type>
+        <type>Sword</type>
+        <type>Melee</type>
         <cost>50</cost>
         <difficulty>15</difficulty>
         <time>15</time>
@@ -48,7 +58,9 @@
     </weapon>
     <weapon>
         <name>Force Sword</name>
-        <type>Force, Sword, Melee</type>
+        <type>Force</type>
+        <type>Sword</type>
+        <type>Melee</type>
         <cost>75</cost>
         <passiveEffect>Push the enemy 1d6 meters on hit, before Saving Throw.</passiveEffect>
         <difficulty>15</difficulty>
