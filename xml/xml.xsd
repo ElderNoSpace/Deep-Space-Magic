@@ -109,13 +109,97 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:group ref="typeGroup"/>
             <xs:element name="time" type="xs:string" minOccurs="0"/>
             <xs:element name="cost" type="xs:string" minOccurs="0"/>
-            <xs:element name="effect" type="xs:string"/>
+            <xs:element name="effect" type="effectType" maxOccurs="unbounded"/>
             <xs:element name="upeffect" type="xs:string" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="difficulty" type="xs:string"/>
         <xs:attribute name="upgrade" type="xs:string"/>
         <xs:attribute name="specialist" default="false" type="xs:boolean"/>
         <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <xs:element name="result" abstract="true"/>
+
+    <!--A type describing a effect of an action-->
+    <xs:complexType name="effectType">
+        <xs:sequence>
+            <xs:element name="target" type="targetType"/>
+            <xs:element name="range" type="xs:int"/>
+            <xs:element name="aoe" type="aoeType" minOccurs="0"/>
+            <xs:element name="save" type="attributeEnum" minOccurs="0"/>
+            <xs:element name="duration" type="xs:int"/>
+            
+            <xs:element ref="result" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="wait" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="actionSteal" substitutionGroup="result"/>
+    <xs:element name="visionSteal" substitutionGroup="result"/>
+    <xs:element name="illusion" substitutionGroup="result"/>
+    <xs:element name="levitate" substitutionGroup="result"/>
+    <xs:element name="tempType" substitutionGroup="result" type="typeEnum"/>
+    <xs:element name="setWeaponAttribute" substitutionGroup="result" type="weaponAttributeType"/>
+    <xs:element name="pullItem" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="equip" substitutionGroup="result" type="equipType"/>
+    <xs:element name="saveModifier" substitutionGroup="result" type="saveModifierType"/>
+    <xs:element name="teleport" substitutionGroup="result"/>
+    <xs:element name="allLineOfSight" substitutionGroup="result"/>
+    <xs:element name="damage" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="push" substitutionGroup="result" type="xs:int"/>
+
+    <xs:complexType name="targetType">
+            <xs:sequence>
+                <xs:element name="type" type="typeEnum" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="thing" type="targetEnum"/>
+                <xs:element name="modifier" type="modifierType" minOccurs="0"/>
+            </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="targetEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Character"/>
+            <xs:enumeration value="Self"/>
+            <xs:enumeration value="Weapon"/>
+            <xs:enumeration value="Item"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="modifierType">
+        <xs:union memberTypes="xs:int">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="All"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
+
+    <xs:complexType name="weaponAttributeType">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="attribue">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Range"/>
+                        <!--TODO add all the other attributes-->
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="value" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="equipType">
+        <xs:sequence>
+            <xs:element name="type" type="typeEnum"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="saveModifierType">
+        <xs:sequence>
+            <xs:element name="save" type="attributeEnum"/>
+            <xs:element name="modifier" type="xs:int"/>
+        </xs:sequence>
     </xs:complexType>
 
     <!--A list of classes-->
@@ -202,9 +286,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:element name="difficulty" type="xs:string"/>
             <xs:element name="time" type="xs:string"/>
             <xs:element name="range" type="xs:string"/>
-            <xs:element name="aoe" type="xs:string" minOccurs="0"/>
+            <xs:element name="aoe" type="aoeType" minOccurs="0"/>
             <xs:element name="damage" type="xs:int"/>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="aoeType">
+        <xs:choice>
+            <xs:element name="circle" type="xs:int"/>
+            <xs:element name="cone" type="xs:int"/>
+            <xs:element name="line"/>
+        </xs:choice>
     </xs:complexType>
 
     <!--A list of armour-->

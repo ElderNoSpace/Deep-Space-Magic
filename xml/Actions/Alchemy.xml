@@ -8,7 +8,15 @@
         <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
-        <effect>Target Character within 100m must make a Physical Save or be pushed back 15m and take 1 damage.</effect>
+        <effect>
+            <target><thing>Character</thing></target>
+            <range>100</range>
+            <save>Physical</save>
+            <duration>0</duration>
+            <push>15</push>
+            <damage>1</damage>
+            <!--Target Character within 100m must make a Physical Save or be pushed back 15m and take 1 damage.-->
+        </effect>
         <upeffect>The Difficulty Count is at -1 per level and the distance pushed back increases by 1 per level.</upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
@@ -18,7 +26,18 @@
         <type>Mental</type>
         <time>20</time>
         <cost>1 point from the Mental Pool</cost>
-        <effect>All Characters in a 45$^{\circ}$ cone 50m must make a Physical Save or take 1 damage.</effect>
+        <effect>
+            <target>
+                <thing>Character</thing>
+                <modifier>All</modifier>
+            </target>
+            <range>50</range>
+            <aoe><cone>45</cone></aoe>
+            <save>Physical</save>
+            <duration>0</duration>
+            <damage>1</damage>
+            <!--All Characters in a 45$^{\circ}$ cone 50m must make a Physical Save or take 1 damage.-->
+        </effect>
         <upeffect>Difficulty Count is at -1 per level and at level 5 the arc increases to 60$^{\circ}$.</upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
