@@ -147,6 +147,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="allLineOfSight" substitutionGroup="result"/>
     <xs:element name="damage" substitutionGroup="result" type="xs:int"/>
     <xs:element name="push" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="saveReduceOnHit" substitutionGroup="result" type="saveModifierType"/>
+    <xs:element name="jump" substitutionGroup="result" type="minMaxType"/>
 
     <xs:complexType name="targetType">
             <xs:sequence>
@@ -199,6 +201,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:sequence>
             <xs:element name="save" type="attributeEnum"/>
             <xs:element name="modifier" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="minMaxType">
+        <xs:sequence>
+            <xs:element name="min" type="xs:int"/>
+            <xs:element name="max" type="xs:int"/>
         </xs:sequence>
     </xs:complexType>
 
