@@ -92,13 +92,14 @@
         <effect>
             <target>
                 <type>Melee</type>
-                <thing>Weapon</thing>
+                <type>Weapon</type>
+                <thing>Item</thing>
             </target>
             <range>0</range>
             <duration>100</duration>
             <tempType>Ranged</tempType>
             <setWeaponAttribute>
-                <attribue>Range</attribue>
+                <attribute>Range</attribute>
                 <value>100</value>
             </setWeaponAttribute>
             <!--The range of target Melee Weapon becomes 100m and gains the Ranged type for 100 Time Units.-->
@@ -131,6 +132,7 @@
             <target><thing>Self</thing></target>
             <range>0</range>
             <duration>100</duration>
+            <increaseEquip>1</increaseEquip>
             <equip><type>One Handed</type></equip>
             <!--Your Character equips a One Handed Weapon for 100 Time Units.-->
         </effect>

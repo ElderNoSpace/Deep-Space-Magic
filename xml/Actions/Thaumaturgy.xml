@@ -6,7 +6,16 @@
         <type>Thaumaturgy</type>
         <type>Mental</type>
         <cost>1 Point from the Mental pool and take 1 damage</cost>
-        <effect>Completely refill 1 Cell.</effect>
+        <effect>
+            <target>
+                <type>Cell</type>
+                <thing>Item</thing>
+            </target>
+            <range>0</range>
+            <duration>0</duration>
+            <refill/>
+            <!--Completely refill 1 Cell.-->
+        </effect>
         <upeffect>Decrease difficulty by 1 per level, every 5 levels increase Cells refilled by 1.</upeffect>
     </action>
 </actions>

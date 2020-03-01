@@ -5,12 +5,24 @@
         <name>Equip Weapon</name>
         <type>Misc</type>
         <time>10</time>
-        <effect>Your Character equips a Weapon, if the Weapon is One Handed another One Handed Weapon can be equip aswell.</effect>
+        <effect>
+            <target><thing>Self</thing></target>
+            <range>0</range>
+            <duration>0</duration>
+            <equip><type>Weapon</type></equip>
+            <!--Your Character equips a Weapon, if the Weapon is One Handed another One Handed Weapon can be equip aswell.-->
+        </effect>
     </action>
     <action difficulty="0">
         <name>Unequip Weapon</name>
         <type>Misc</type>
         <time>10</time>
-        <effect>Your Character unequips a Weapon, if the Weapon is One Handed another One Handed Weapon can be unequip aswell.</effect>
+        <effect>
+            <target><thing>Self</thing></target>
+            <range>0</range>
+            <duration>0</duration>
+            <unequip><type>Weapon</type></unequip>
+            <!--Your Character unequips a Weapon, if the Weapon is One Handed another One Handed Weapon can be unequip aswell.-->
+        </effect>
     </action>
 </actions>

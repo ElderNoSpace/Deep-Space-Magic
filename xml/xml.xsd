@@ -107,30 +107,49 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:group ref="typeGroup"/>
-            <xs:element name="time" type="xs:string" minOccurs="0"/>
+            <xs:choice>
+                <xs:sequence>
+                    <xs:element name="using" type="usingType"/>
+                    <xs:element name="number" type="xs:int" minOccurs="0"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:element name="time" type="xs:int" minOccurs="0"/>
+                </xs:sequence>
+            </xs:choice>
             <xs:element name="cost" type="xs:string" minOccurs="0"/>
             <xs:element name="effect" type="effectType" maxOccurs="unbounded"/>
             <xs:element name="upeffect" type="xs:string" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute name="difficulty" type="xs:string"/>
+        <xs:attribute name="difficulty" type="intSubType"/>
         <xs:attribute name="upgrade" type="xs:string"/>
         <xs:attribute name="specialist" default="false" type="xs:boolean"/>
         <xs:attributeGroup ref="indexGroup"/>
+    </xs:complexType>
+
+    <xs:complexType name="usingType">
+        <xs:group ref="typeGroup"/>
     </xs:complexType>
 
     <xs:element name="result" abstract="true"/>
 
     <!--A type describing a effect of an action-->
     <xs:complexType name="effectType">
-        <xs:sequence>
-            <xs:element name="target" type="targetType"/>
-            <xs:element name="range" type="xs:int"/>
-            <xs:element name="aoe" type="aoeType" minOccurs="0"/>
-            <xs:element name="save" type="attributeEnum" minOccurs="0"/>
-            <xs:element name="duration" type="xs:int"/>
+        <xs:choice>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element name="takeAction" type="xs:string"/>
+                <xs:element name="alterAttribute" type="actionAttributeType" minOccurs="0"/>
+                <xs:element name="using" type="intSubType" minOccurs="0"/>
+            </xs:sequence>
+            <xs:sequence>
+                <xs:element name="target" type="targetType"/>
+                <xs:element name="range" type="intSubType"/>
+                <xs:element name="aoe" type="aoeType" minOccurs="0"/>
+                <xs:element name="save" type="attributeEnum" minOccurs="0"/>
+                <xs:element name="duration" type="xs:int"/>
             
-            <xs:element ref="result" maxOccurs="unbounded"/>
-        </xs:sequence>
+                <xs:element ref="result" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:choice>
     </xs:complexType>
 
     <xs:element name="wait" substitutionGroup="result" type="xs:int"/>
@@ -142,13 +161,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="setWeaponAttribute" substitutionGroup="result" type="weaponAttributeType"/>
     <xs:element name="pullItem" substitutionGroup="result" type="xs:int"/>
     <xs:element name="equip" substitutionGroup="result" type="equipType"/>
+    <xs:element name="unequip" substitutionGroup="result" type="equipType"/>
+    <xs:element name="increaseEquip" substitutionGroup="result" type="xs:int"/>
     <xs:element name="saveModifier" substitutionGroup="result" type="saveModifierType"/>
     <xs:element name="teleport" substitutionGroup="result"/>
     <xs:element name="allLineOfSight" substitutionGroup="result"/>
-    <xs:element name="damage" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="damage" substitutionGroup="result" type="intSubType"/>
     <xs:element name="push" substitutionGroup="result" type="xs:int"/>
     <xs:element name="saveReduceOnHit" substitutionGroup="result" type="saveModifierType"/>
     <xs:element name="jump" substitutionGroup="result" type="minMaxType"/>
+    <xs:element name="reduceDifficulty" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="bounce" substitutionGroup="result"/>
+    <xs:element name="addActionAttribute" substitutionGroup="result" type="actionAttributeType"/>
+    <xs:element name="createWeapon" substitutionGroup="result" type="weaponType"/>
+    <xs:element name="ignoresCover" substitutionGroup="result"/>
+    <xs:element name="refill" substitutionGroup="result"/>
+    <!--<xs:element name="move" substitutionGroup="result" type="xs:int"/>-->
 
     <xs:complexType name="targetType">
             <xs:sequence>
@@ -162,8 +190,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:restriction base="xs:string">
             <xs:enumeration value="Character"/>
             <xs:enumeration value="Self"/>
-            <xs:enumeration value="Weapon"/>
             <xs:enumeration value="Item"/>
+            <xs:enumeration value="Action"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -178,8 +206,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     </xs:simpleType>
 
     <xs:complexType name="weaponAttributeType">
-        <xs:sequence maxOccurs="unbounded">
-            <xs:element name="attribue">
+        <xs:sequence>
+            <xs:element name="attribute" maxOccurs="unbounded">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="Range"/>
@@ -209,6 +237,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:element name="min" type="xs:int"/>
             <xs:element name="max" type="xs:int"/>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="actionAttributeType">
+        <xs:choice>
+            <xs:element name="range" type="xs:int"/>
+            <xs:element name="difficulty" type="xs:int"/>
+        </xs:choice>
     </xs:complexType>
 
     <!--A list of classes-->
@@ -261,7 +296,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:group ref="typeGroup"/>
-            <xs:element name="cost" type="xs:string"/>
+            <xs:element name="cost" type="xs:string" minOccurs="0"/>
             <xs:element ref="actions" minOccurs="0"/>
             <xs:element name="passiveEffect" type="xs:string" minOccurs="0"/>
         </xs:sequence>
@@ -292,9 +327,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:complexType name="weaponType">
         <xs:sequence>
             <xs:group ref="equipmentGroup"/>
-            <xs:element name="difficulty" type="xs:string"/>
-            <xs:element name="time" type="xs:string"/>
-            <xs:element name="range" type="xs:string"/>
+            <xs:element name="difficulty" type="xs:int"/>
+            <xs:element name="time" type="xs:int"/>
+            <xs:element name="range" type="xs:int"/>
             <xs:element name="aoe" type="aoeType" minOccurs="0"/>
             <xs:element name="damage" type="xs:int"/>
         </xs:sequence>
@@ -302,6 +337,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     <xs:complexType name="aoeType">
         <xs:choice>
+            <xs:element name="Weapon"/>
             <xs:element name="circle" type="xs:int"/>
             <xs:element name="cone" type="xs:int"/>
             <xs:element name="line"/>
@@ -324,6 +360,19 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:element name="modifier" type="xs:int"/>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:simpleType name="intSubType">
+        <xs:union memberTypes="xs:int">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Weapon"/>
+                    <xs:enumeration value="Weapon1"/>
+                    <xs:enumeration value="Weapon2"/>
+                    <xs:enumeration value="Weapon3"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:union>
+    </xs:simpleType>
 
     <xs:group name="typeGroup">
         <xs:sequence>
@@ -362,10 +411,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:enumeration value="Release"/>
             
             <xs:enumeration value="Thaumaturgy"/>
+            <xs:enumeration value="Cell"/>
 
+            <xs:enumeration value="Weapon"/>
             <xs:enumeration value="Melee"/>
             <xs:enumeration value="Sword"/>
             <xs:enumeration value="Axe"/>
+            <xs:enumeration value="Spear"/>
             <xs:enumeration value="Heat"/>
             <xs:enumeration value="Beam"/>
             <xs:enumeration value="Force"/>

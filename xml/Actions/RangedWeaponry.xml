@@ -1,30 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
 <actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
-    <action upgrade="$l$" difficulty="Weapon Difficulty">
+    <action upgrade="$l$" difficulty="Weapon">
         <name>Shoot Ranged Weapon</name>
         <type>Shoot</type>
         <type>Ranged</type>
-        <time>Weapon Time</time>
-        <cost>1 ammunition that the Shoot Weapon uses.</cost>
-        <effect>Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.</effect>
+        <using>
+            <type>Shoot</type>
+            <type>Weapon</type>
+        </using>
+        <effect>
+            <target><thing>Character</thing></target>
+            <range>Weapon</range>
+            <aoe><Weapon/></aoe>
+            <save>Physical</save>
+            <duration>0</duration>
+            <damage>Weapon</damage>
+            <!--Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.-->
+        </effect>
         <upeffect>The Difficulty Count is at -1 per level.</upeffect>
     </action>
     <action upgrade="$l^2$">
         <name>Shoot Two Ranged Weapons</name>
         <type>Shoot</type>
         <type>Ranged</type>
-        <time>Sum of both Weapon Times</time>
-        <effect>Make a Shoot Ranged Weapon Action for two differenent equiped Ranged Weapons immediatly.</effect>
+        <using>
+            <type>Shoot</type>
+            <type>Weapon</type>
+        </using>
+        <number>2</number>
+        <effect>
+            <takeAction>Shoot Ranged Weapon</takeAction>
+            <using>Weapon1</using>
+            <takeAction>Shoot Ranged Weapon</takeAction>
+            <using>Weapon2</using>
+            <!--Make a Shoot Ranged Weapon Action for two differenent equiped Ranged Weapons immediatly.-->
+        </effect>
         <upeffect>The Action Time reduces by 1 each level to a minimum of the longest of the two Weapon's Time.</upeffect>
     </action>
     <action upgrade="$l$">
-        <name>Throw Grenade</name>
+        <name>Throw Weapon</name>
         <type>Throw</type>
         <type>Ranged</type>
-        <time>Weapon Time</time>
-        <cost>1 of the weapon used</cost>
-        <effect>Target Character at Weapon Range and all other Characters within Area of Effect must make a Physical Save or take Weapon Damage.</effect>
+        <using>
+            <type>Throw</type>
+            <type>Weapon</type>
+        </using>
+        <effect>
+            <target><thing>Character</thing></target>
+            <range>Weapon</range>
+            <aoe><Weapon/></aoe>
+            <save>Physical</save>
+            <duration>0</duration>
+            <damage>Weapon</damage>
+            <!--Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.-->
+        </effect>
         <upeffect>The Difficulty Count is at -1 per level.</upeffect>
     </action>
     <action upgrade="$l!$">
@@ -32,7 +62,18 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <time>+5</time>
-        <effect>Modifies Shoot Ranged Weapon Action Difficulty by -3.</effect>
+        <effect>
+            <target>
+                <type>Shoot</type>
+                <thing>Action</thing>
+            </target>
+            <range>0</range>
+            <duration>0</duration>
+            <addActionAttribute>
+                <difficulty>-3</difficulty>
+            </addActionAttribute>
+            <!--Modifies Shoot Ranged Weapon Action Difficulty by -3.-->
+        </effect>
         <upeffect>-1 per level to the Time Modifier up to five levels.</upeffect>
     </action>
     <action upgrade="$l$">
@@ -40,9 +81,21 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <type>Physical</type>
-        <time>Weapon Time</time>
+        <using>
+            <type>Rapid Fire</type>
+            <type>Shoot</type>
+            <type>Weapon</type>
+        </using>
         <cost>1 point from the Physical Pool</cost>
-        <effect>Make two Shoot Ranged Weapon Actions with a Rapid Fire Ranged Weapon at +5 Difficulty</effect>
+        <effect>
+            <takeAction>Shoot Ranged Weapon</takeAction>
+            <alterAttribute><difficulty>+5</difficulty></alterAttribute>
+            <using>Weapon</using>
+            <takeAction>Shoot Ranged Weapon</takeAction>
+            <alterAttribute><difficulty>+5</difficulty></alterAttribute>
+            <using>Weapon</using>
+            <!--Make two Shoot Ranged Weapon Actions with a Rapid Fire Ranged Weapon at +5 Difficulty-->
+        </effect>
         <upeffect>Extra difficulty is decreased by 1 each level to a minimum of 0 and every 5 levels the number of Shoot Ranged Weapon Actions made increases by 1.</upeffect>
     </action>
 </actions>

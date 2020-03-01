@@ -6,7 +6,7 @@
         <type>Movement</type>
         <time>Distance/Speed</time>
         <effect>
-            Move around the battlefield to another location, see the \hyperlink{Movement}{movement} subsection of Combat for some nuances.
+            <!--Move around the battlefield to another location, see the \hyperlink{Movement}{movement} subsection of Combat for some nuances.-->
         </effect>
     </action>
     <action difficulty="0" upgrade="$l!$" index="true">
@@ -14,7 +14,7 @@
         <type>Movement</type>
         <time>3$\times$Distance/Speed</time>
         <effect>
-            Jump over things for a maximum distance of 3m.
+            <!--Jump over things for a maximum distance of 3m.-->
         </effect>
         <upeffect>The max distance increases at 1m per level.</upeffect>
     </action>
