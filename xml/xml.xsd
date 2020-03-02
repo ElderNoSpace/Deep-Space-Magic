@@ -159,6 +159,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="levitate" substitutionGroup="result"/>
     <xs:element name="tempType" substitutionGroup="result" type="typeEnum"/>
     <xs:element name="setWeaponAttribute" substitutionGroup="result" type="weaponAttributeType"/>
+    <xs:element name="addWeaponAttribute" substitutionGroup="result" type="weaponAttributeType"/>
+    <xs:element name="addWeaponType" substitutionGroup="result" type="typeEnum"/>
     <xs:element name="pullItem" substitutionGroup="result" type="xs:int"/>
     <xs:element name="equip" substitutionGroup="result" type="equipType"/>
     <xs:element name="unequip" substitutionGroup="result" type="equipType"/>
@@ -176,11 +178,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="createWeapon" substitutionGroup="result" type="weaponType"/>
     <xs:element name="ignoresCover" substitutionGroup="result"/>
     <xs:element name="refill" substitutionGroup="result"/>
+    <xs:element name="lockdown" substitutionGroup="result"/>
+    <xs:element name="damageHolder" substitutionGroup="result" type="damageType"/>
     <!--<xs:element name="move" substitutionGroup="result" type="xs:int"/>-->
 
     <xs:complexType name="targetType">
             <xs:sequence>
-                <xs:element name="type" type="typeEnum" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="not" minOccurs="0"/>
+                    <xs:element name="type" type="typeEnum"/>
+                </xs:sequence>
                 <xs:element name="thing" type="targetEnum"/>
                 <xs:element name="modifier" type="modifierType" minOccurs="0"/>
             </xs:sequence>
@@ -206,17 +213,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     </xs:simpleType>
 
     <xs:complexType name="weaponAttributeType">
-        <xs:sequence>
-            <xs:element name="attribute" maxOccurs="unbounded">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:enumeration value="Range"/>
-                        <!--TODO add all the other attributes-->
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="value" type="xs:int"/>
-        </xs:sequence>
+        <xs:choice>
+            <xs:element name="range" type="xs:int"/>
+            <xs:element name="difficulty" type="xs:int"/>
+        </xs:choice>
     </xs:complexType>
 
     <xs:complexType name="equipType">
@@ -244,6 +244,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:element name="range" type="xs:int"/>
             <xs:element name="difficulty" type="xs:int"/>
         </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="damageType">
+        <xs:sequence>
+            <xs:element name="save" type="attributeEnum"/>
+            <xs:element name="amount" type="xs:int"/>
+        </xs:sequence>
     </xs:complexType>
 
     <!--A list of classes-->
