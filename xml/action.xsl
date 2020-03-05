@@ -28,12 +28,17 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 -->{<xsl:value-of select="@difficulty"/>}{<xsl:value-of select="@upgrade"/>}
     \textit{<xsl:apply-templates select="type"/>}\\
     \rule{\hsize}{0.4pt}
+    <xsl:if test="using">
+    Using <xsl:value-of select="number"/><xsl:text> </xsl:text><xsl:apply-templates select="type"/>.
+    \rule{\hsize}{0.4pt}
+    </xsl:if>
+
     <xsl:if test="cost">
     <xsl:value-of select="cost"/>
     \rule{\hsize}{0.4pt}
     </xsl:if>
 
-    <xsl:value-of select="effect"/>
+    <xsl:apply-templates select="effect"/>
 
     <xsl:if test="upeffect">
     \rule{\hsize}{0.4pt}         
@@ -52,6 +57,40 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <xsl:template name="linkActions">
     <xsl:param name="name"/>
     \hyperlink{Action_<xsl:value-of select="translate($name, ' ', '_')"/>}{<xsl:value-of select="$name"/>}
+</xsl:template>
+
+<xsl:template match="effect">
+    <xsl:choose>
+        <xsl:when test="takeAction">
+            Take the <xsl:for-each select="takeAction"><xsl:value-of select="node()"/> action <xsl:apply-templates select="following-sibling::alterAttribute[1]"/>, </xsl:for-each> using <xsl:if test="using"><xsl:for-each select="using"><xsl:value-of select="node()"/>, </xsl:for-each> respectivly.</xsl:if>
+        </xsl:when>
+        <xsl:when test="target">
+            Target <xsl:apply-templates select="target"/> <xsl:if test="range"> at range <xsl:value-of select="range"/>m</xsl:if> <xsl:apply-templates select="aoe"/> <xsl:if test="save"> has to make a <xsl:value-of select="save"/> save or</xsl:if> 
+
+            <xsl:if test="duration"> for <xsl:value-of select="duration"/> Time Units</xsl:if>.
+        </xsl:when>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template match="alterAttribute">
+    add <xsl:choose><xsl:when test="range"><xsl:value-of select="range"/> to range</xsl:when><xsl:when test="range"><xsl:value-of select="difficulty"/> to difficulty</xsl:when></xsl:choose>
+</xsl:template>
+
+<xsl:template match="using">
+    using a <xsl:value-of select="type"/>
+</xsl:template>
+
+<xsl:template match="target">
+    <xsl:value-of select="modifier"/> <xsl:apply-templates select="type"/> <xsl:value-of select="thing"/>
+</xsl:template>
+
+<xsl:template match="aoe">
+    <xsl:choose>
+        <xsl:when test="Weapon">within Weapon aoe</xsl:when>
+        <xsl:when test="circle">in a <xsl:value-of select="circle"/>m radius circle</xsl:when>
+        <xsl:when test="cone">in a <xsl:value-of select="cone"/>$^{\circ}$ cone</xsl:when>
+        <xsl:when test="line">in a line</xsl:when>
+    </xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>

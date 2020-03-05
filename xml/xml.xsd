@@ -137,15 +137,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:choice>
             <xs:sequence maxOccurs="unbounded">
                 <xs:element name="takeAction" type="xs:string"/>
-                <xs:element name="alterAttribute" type="actionAttributeType" minOccurs="0"/>
+                <xs:element name="alterAttribute" type="actionAttributeType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="using" type="intSubType" minOccurs="0"/>
             </xs:sequence>
             <xs:sequence>
                 <xs:element name="target" type="targetType"/>
-                <xs:element name="range" type="intSubType"/>
+                <xs:element name="range" type="intSubType" minOccurs="0"/>
                 <xs:element name="aoe" type="aoeType" minOccurs="0"/>
                 <xs:element name="save" type="attributeEnum" minOccurs="0"/>
-                <xs:element name="duration" type="xs:int"/>
+                <xs:element name="duration" type="xs:int" minOccurs="0"/>
             
                 <xs:element ref="result" maxOccurs="unbounded"/>
             </xs:sequence>

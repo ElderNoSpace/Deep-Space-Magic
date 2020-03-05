@@ -12,12 +12,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <xsl:output method="text" media-type="application/x-latex"/>
 
-<xsl:template match="type[last()]">
-    <xsl:value-of select="."/>.
+<xsl:template match="type[last()]"><!--TODO preceding-sibling::not[last()] probably wont work-->
+    <xsl:if test="preceding-sibling::not[last()]">not </xsl:if><xsl:value-of select="."/>.
 </xsl:template>
 
 <xsl:template match="type[position()&lt;last()]">
-    <xsl:value-of select="."/><xsl:text>, </xsl:text>
+    <xsl:if test="preceding-sibling::not[last()]">not </xsl:if><xsl:value-of select="."/><xsl:text>, </xsl:text>
 </xsl:template>
 
 </xsl:stylesheet>
