@@ -4,26 +4,41 @@
     <action difficulty="0" index="true">
         <name>Move</name>
         <type>Movement</type>
-        <time>Distance/Speed</time>
+        <time>5</time>
         <effect>
+            <target><thing>Self</thing></target>
+            <range>0</range>
+            <duration>0</duration>
+            <move>Speed</move>
+            <noCoolDown/>
             <!--Move around the battlefield to another location, see the \hyperlink{Movement}{movement} subsection of Combat for some nuances.-->
         </effect>
     </action>
     <action difficulty="0" upgrade="$l!$" index="true">
         <name>Jump</name>
         <type>Movement</type>
-        <time>3$\times$Distance/Speed</time>
+        <time>15</time>
         <effect>
+            <target><thing>Self</thing></target>
+            <range>0</range>
+            <duration>0</duration>
+            <move>Speed</move>
+            <noCoolDown/>
             <!--Jump over things for a maximum distance of 3m.-->
         </effect>
-        <upeffect>The max distance increases at 1m per level.</upeffect>
+        <upeffect>Time decreaes by 1 per level.</upeffect>
     </action>
     <action difficulty="10" upgrade="$l$" index="true">
         <name>Climb</name>
         <type>Movement</type>
-        <time>3$\times$Distance/Speed</time>
+        <time>15</time>
         <effect>
-            Vertically scale walls, ropes ect. If the surface is slippery the base Difficulty Count is instead 15.
+            <target><thing>Self</thing></target>
+            <range>0</range>
+            <duration>0</duration>
+            <move>Speed</move>
+            <noCoolDown/>
+            <!--Vertically scale walls, ropes ect. If the surface is slippery the base Difficulty Count is instead 15.-->
         </effect>
         <upeffect>The difficulty count is at -1 per level.</upeffect>
     </action>

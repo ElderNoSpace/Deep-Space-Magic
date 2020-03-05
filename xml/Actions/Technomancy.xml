@@ -91,6 +91,16 @@
         <time>10</time>
         <cost>1 point from the Mental Pool.</cost>
         <effect>
+            <target>
+                <type>Force</type>
+                <type>Weapon</type>
+                <thing>Item</thing>
+            </target>
+            <range>0</range>
+            <duration>100</duration>
+            <addWeaponAttribute>
+                <push>1d4</push>
+            </addWeaponAttribute>
             <!--Target Force Weapon that pushes Characters pushes that Character an extra 1d4m for 100 Time Units.-->
         </effect>
         <upeffect>Difficulty count is reduced by 1, roll an extra 1d4 for extra distance and duration increases by 50 Time Units per level.</upeffect>

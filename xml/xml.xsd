@@ -180,7 +180,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="refill" substitutionGroup="result"/>
     <xs:element name="lockdown" substitutionGroup="result"/>
     <xs:element name="damageHolder" substitutionGroup="result" type="damageType"/>
-    <!--<xs:element name="move" substitutionGroup="result" type="xs:int"/>-->
+    <xs:element name="move" substitutionGroup="result" type="intSubType"/>
+    <xs:element name="noCoolDown" substitutionGroup="result"/>
 
     <xs:complexType name="targetType">
             <xs:sequence>
@@ -216,6 +217,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:choice>
             <xs:element name="range" type="xs:int"/>
             <xs:element name="difficulty" type="xs:int"/>
+            <xs:element name="push" type="die"/>
         </xs:choice>
     </xs:complexType>
 
@@ -376,9 +378,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <xs:enumeration value="Weapon1"/>
                     <xs:enumeration value="Weapon2"/>
                     <xs:enumeration value="Weapon3"/>
+                    <xs:enumeration value="Speed"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:union>
+    </xs:simpleType>
+
+    <xs:simpleType name="die">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([0-9])+[d]([0-9])+"/>
+        </xs:restriction>
     </xs:simpleType>
 
     <xs:group name="typeGroup">
