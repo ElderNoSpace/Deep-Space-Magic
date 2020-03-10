@@ -160,7 +160,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="tempType" substitutionGroup="result" type="typeEnum"/>
     <xs:element name="setWeaponAttribute" substitutionGroup="result" type="weaponAttributeType"/>
     <xs:element name="addWeaponAttribute" substitutionGroup="result" type="weaponAttributeType"/>
-    <xs:element name="addWeaponType" substitutionGroup="result" type="typeEnum"/>
     <xs:element name="pullItem" substitutionGroup="result" type="xs:int"/>
     <xs:element name="equip" substitutionGroup="result" type="equipType"/>
     <xs:element name="unequip" substitutionGroup="result" type="equipType"/>

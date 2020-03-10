@@ -76,7 +76,7 @@
             </target>
             
             <duration>100</duration>
-            <addWeaponType>Rapid Fire</addWeaponType>
+            <tempType>Rapid Fire</tempType>
             <!--Target Shoot Weapon gains Rapid Fire for 100 Time Units-->
         </effect>
         <upeffect>Difficulty count is reduced by 1 and duration increases by 50 Time Units per level.</upeffect>

@@ -11,6 +11,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="text" media-type="application/x-latex"/>
 
+<xsl:import href="result.xsl"/>
+
 <!--Call the template on each action-->
 <xsl:template match="actions">
     <xsl:apply-templates select="action"/>
@@ -67,6 +69,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xsl:when test="target">
             Target <xsl:apply-templates select="target"/> <xsl:if test="range"> at range <xsl:value-of select="range"/>m</xsl:if> <xsl:apply-templates select="aoe"/> <xsl:if test="save"> has to make a <xsl:value-of select="save"/> save or</xsl:if>
 
+            <xsl:apply-templates select="wait"/>
+            <xsl:apply-templates select="actionSteal"/>
+            <xsl:apply-templates select="visionSteal"/>
+            <xsl:apply-templates select="illusion"/>
+            <xsl:apply-templates select="levitate"/>
+            <xsl:apply-templates select="tempType"/>
+            <xsl:apply-templates select="setWeaponAttribute"/>
+            <xsl:apply-templates select="addWeaponAttribute"/>
+            <xsl:apply-templates select="pullItem"/>
+            <xsl:apply-templates select="equip"/>
+            <xsl:apply-templates select="unequip"/>
+            <xsl:apply-templates select="increaseEquip"/>
+            <xsl:apply-templates select="saveModifier"/>
+            <xsl:apply-templates select="teleport"/>
+            <xsl:apply-templates select="allLineOfSight"/>
+            <xsl:apply-templates select="damage"/>
+            <xsl:apply-templates select="push"/>
+            <xsl:apply-templates select="saveReduceOnHit"/>
+            <xsl:apply-templates select="jump"/>
+            <xsl:apply-templates select="reduceDifficulty"/>
+            
             <xsl:if test="duration"> for <xsl:value-of select="duration"/> Time Units</xsl:if>.
         </xsl:when>
     </xsl:choose>
