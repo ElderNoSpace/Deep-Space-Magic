@@ -11,8 +11,6 @@
                 <type>Cell</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
-            <duration>0</duration>
             <refill/>
             <!--Completely refill 1 Cell.-->
         </effect>

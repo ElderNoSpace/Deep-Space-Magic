@@ -65,7 +65,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             Take the <xsl:for-each select="takeAction"><xsl:value-of select="node()"/> action <xsl:apply-templates select="following-sibling::alterAttribute[1]"/>, </xsl:for-each> using <xsl:if test="using"><xsl:for-each select="using"><xsl:value-of select="node()"/>, </xsl:for-each> respectivly.</xsl:if>
         </xsl:when>
         <xsl:when test="target">
-            Target <xsl:apply-templates select="target"/> <xsl:if test="range"> at range <xsl:value-of select="range"/>m</xsl:if> <xsl:apply-templates select="aoe"/> <xsl:if test="save"> has to make a <xsl:value-of select="save"/> save or</xsl:if> 
+            Target <xsl:apply-templates select="target"/> <xsl:if test="range"> at range <xsl:value-of select="range"/>m</xsl:if> <xsl:apply-templates select="aoe"/> <xsl:if test="save"> has to make a <xsl:value-of select="save"/> save or</xsl:if>
 
             <xsl:if test="duration"> for <xsl:value-of select="duration"/> Time Units</xsl:if>.
         </xsl:when>

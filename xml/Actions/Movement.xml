@@ -7,8 +7,6 @@
         <time>5</time>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
-            <duration>0</duration>
             <move>Speed</move>
             <noCoolDown/>
             <!--Move around the battlefield to another location, see the \hyperlink{Movement}{movement} subsection of Combat for some nuances.-->
@@ -20,8 +18,6 @@
         <time>15</time>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
-            <duration>0</duration>
             <move>Speed</move>
             <noCoolDown/>
             <!--Jump over things for a maximum distance of 3m.-->
@@ -34,8 +30,6 @@
         <time>15</time>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
-            <duration>0</duration>
             <move>Speed</move>
             <noCoolDown/>
             <!--Vertically scale walls, ropes ect. If the surface is slippery the base Difficulty Count is instead 15.-->

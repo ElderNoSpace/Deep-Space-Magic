@@ -14,7 +14,7 @@
             <range>Weapon</range>
             <aoe><Weapon/></aoe>
             <save>Physical</save>
-            <duration>0</duration>
+            
             <damage>Weapon</damage>
             <!--Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.-->
         </effect>
@@ -51,7 +51,7 @@
             <range>Weapon</range>
             <aoe><Weapon/></aoe>
             <save>Physical</save>
-            <duration>0</duration>
+            
             <damage>Weapon</damage>
             <!--Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.-->
         </effect>
@@ -67,8 +67,8 @@
                 <type>Shoot</type>
                 <thing>Action</thing>
             </target>
-            <range>0</range>
-            <duration>0</duration>
+            
+            
             <addActionAttribute>
                 <difficulty>-3</difficulty>
             </addActionAttribute>

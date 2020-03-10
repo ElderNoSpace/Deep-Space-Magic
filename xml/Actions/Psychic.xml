@@ -12,7 +12,6 @@
             <target><thing>Character</thing></target>
             <range>100</range>
             <save>Mental</save>
-            <duration>0</duration>
             <wait>25</wait>
             <!--Target Character within 100m must make a Mental Save or must wait 25 Time Units.--></effect>
         <upeffect>The Difficulty Count is at -1 per level and the amount of Time Units the affected Character has to wait increases by 5.</upeffect>
@@ -28,7 +27,6 @@
             <target><thing>Character</thing></target>
             <range>20</range>
             <save>Mental</save>
-            <duration>0</duration>
             <actionSteal/>
             <!--Target Character within 20m must make a Mental Save or you decide their next Action, this Action must be one they are able to do.--></effect>
         <upeffect>The Difficulty Count is at -1 per level and range is at +1 per level.</upeffect>
@@ -75,7 +73,7 @@
         <cost>1 point from the Mental Pool.</cost>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
+            
             <duration>100</duration>
             <levitate/>
             <!--Your Character floats up one meter into the air and you can move $2ms^{-1}$ and ignore Difficult Terrain.--></effect>
@@ -95,12 +93,11 @@
                 <type>Weapon</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
+            
             <duration>100</duration>
             <tempType>Ranged</tempType>
             <setWeaponAttribute>
-                <attribute>Range</attribute>
-                <value>100</value>
+                <range>100</range>
             </setWeaponAttribute>
             <!--The range of target Melee Weapon becomes 100m and gains the Ranged type for 100 Time Units.-->
         </effect>
@@ -116,7 +113,6 @@
         <effect>
             <target><thing>Item</thing></target>
             <range>100</range>
-            <duration>0</duration>
             <pullItem>10</pullItem>
             <!--Your Character pulls target non-Character object, less than 10kg, within 100m that is not held by any other Character into your Character's hand.--></effect>
         <upeffect>The Difficulty count decreases by 1 per level and the maximum weight of the object increases by 5kg per level.</upeffect>
@@ -130,7 +126,7 @@
         <cost>1 point from the Mental Pool.</cost>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
+            
             <duration>100</duration>
             <increaseEquip>1</increaseEquip>
             <equip><type>One Handed</type></equip>
@@ -147,7 +143,7 @@
         <cost>1 point from the Mental Pool.</cost>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
+            
             <duration>100</duration>
             <saveModifier>
                 <save>Physical</save>
@@ -167,7 +163,6 @@
         <effect>
             <target><thing>Self</thing></target>
             <range>50</range>
-            <duration>0</duration>
             <teleport/>
             <!--Your Character teleports up to 50m away-->
         </effect>

@@ -12,7 +12,6 @@
             <target><thing>Character</thing></target>
             <range>100</range>
             <save>Physical</save>
-            <duration>0</duration>
             <push>15</push>
             <damage>1</damage>
             <!--Target Character within 100m must make a Physical Save or be pushed back 15m and take 1 damage.-->
@@ -34,7 +33,6 @@
             <range>50</range>
             <aoe><cone>45</cone></aoe>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <!--All Characters in a 45$^{\circ}$ cone 50m must make a Physical Save or take 1 damage.-->
         </effect>
@@ -53,7 +51,7 @@
                 <type>Melee</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
+            
             <duration>50</duration>
             <saveReduceOnHit>
                 <save>Physical</save>
@@ -76,7 +74,7 @@
                 <type>Rail</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
+            
             <duration>50</duration>
             <saveReduceOnHit>
                 <save>Physical</save>
@@ -95,8 +93,6 @@
         <cost>1 point from the Mental Pool</cost>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
-            <duration>0</duration>
             <jump>
                 <min>50</min>
                 <max>100</max>
@@ -116,7 +112,6 @@
             <target><thing>Character</thing></target>
             <range>200</range>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <!--Target Character within 200m must make a Physical Save or take 1 damage.-->
         </effect>
@@ -137,7 +132,6 @@
             <range>75</range>
             <aoe><line/></aoe>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <!--All Characters in a 75m line must make a Physical Save or take 1 damage.-->
         </effect>
@@ -171,7 +165,6 @@
             <target><thing>Character</thing></target>
             <range>100</range>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <wait>5</wait>
             <!--Target Character within 100m must make a Physical Save or have to wait 5 Time Units and take 1 damage.-->
@@ -189,7 +182,6 @@
             <target><thing>Character</thing></target>
             <range>75</range>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <bounce/>
             <!--Target Character within 75m must make a Physical Save or take 1 damage. Each time a Character takes damage from this Action the nearest Character that has not been effected by it must make a Physical Save or take 1 damage-->
@@ -209,8 +201,6 @@
                 <type>Shoot</type>
                 <thing>Action</thing>
             </target>
-            <range>0</range>
-            <duration>0</duration>
             <addActionAttribute>
                 <range>25</range>
             </addActionAttribute>
@@ -227,7 +217,7 @@
         <cost>1 point from the Mental Pool</cost>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
+            
             <duration>50</duration>
             <createWeapon>
                 <name>Lighting Spear</name>
@@ -255,7 +245,6 @@
         <effect>
             <target><thing>Character</thing></target>
             <range>50</range>
-            <duration>0</duration>
             <damage>2</damage>
             <!--Target Character within 50m must make a Physical Save or take 2 damage.-->
         </effect>
@@ -276,7 +265,6 @@
             <range>75</range>
             <aoe><circle>10</circle></aoe>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <!--All Characters in a 10m radius circle at 75m must make a Physical Save or take 1 damage.-->
         </effect>
@@ -297,7 +285,6 @@
             <range>50</range>
             <aoe><circle>5</circle></aoe>
             <save>Physical</save>
-            <duration>0</duration>
             <damage>1</damage>
             <ignoresCover/>
             <!--All Characters in a 5m radius circle at 50m must make a Physical Save or take 1 damage, ignores Cover.-->
@@ -314,7 +301,7 @@
         <cost>1 point from the Mental Pool</cost>
         <effect>
             <target><thing>Self</thing></target>
-            <range>0</range>
+            
             <duration>50</duration>
             <createWeapon>
                 <name>Flame Blade</name>

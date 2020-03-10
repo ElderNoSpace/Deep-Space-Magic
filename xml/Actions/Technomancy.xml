@@ -26,7 +26,6 @@
         <effect>
             <target><not/><type>Simple</type><type>Weapon</type><thing>Item</thing></target>
             <range>100</range>
-            <duration>0</duration>
             <damageHolder>
                 <save>Mental</save>
                 <amount>1</amount>
@@ -52,7 +51,7 @@
                 <type>Sword</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
+            
             <duration>100</duration>
             <addWeaponAttribute>
                 <range>1</range>
@@ -75,7 +74,7 @@
                 <type>Weapon</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
+            
             <duration>100</duration>
             <addWeaponType>Rapid Fire</addWeaponType>
             <!--Target Shoot Weapon gains Rapid Fire for 100 Time Units-->
@@ -96,7 +95,7 @@
                 <type>Weapon</type>
                 <thing>Item</thing>
             </target>
-            <range>0</range>
+            
             <duration>100</duration>
             <addWeaponAttribute>
                 <push>1d4</push>
