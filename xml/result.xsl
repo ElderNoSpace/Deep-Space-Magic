@@ -36,11 +36,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </xsl:template>
 
 <xsl:template match="setWeaponAttribute">
-    sets <xsl:if test="range"><xsl:value-of select="range"/>m range</xsl:if> <xsl:if test="difficulty"><xsl:value-of select="difficulty"/> difficulty</xsl:if>
+    sets <xsl:if test="range"><xsl:value-of select="range"/>m range</xsl:if> <xsl:if test="difficulty"><xsl:value-of select="difficulty"/> difficulty</xsl:if> <xsl:if test="push"><xsl:value-of select="push"/>m push distance</xsl:if> 
 </xsl:template>
 
 <xsl:template match="addWeaponAttribute">
-    gains <xsl:if test="range"><xsl:value-of select="range"/>m range</xsl:if> <xsl:if test="difficulty"><xsl:value-of select="difficulty"/> difficulty</xsl:if>
+    gains <xsl:if test="range"><xsl:value-of select="range"/>m range</xsl:if> <xsl:if test="difficulty"><xsl:value-of select="difficulty"/>difficulty</xsl:if> <xsl:if test="push"><xsl:value-of select="push"/>m push distance</xsl:if> 
 </xsl:template>
 
 <xsl:template match="pullItem">
@@ -89,5 +89,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <xsl:template match="reduceDifficulty">
     gains a <xsl:value-of select="node()"/> to all Difficulty Count Rolls
+</xsl:template>
+
+<xsl:template match="bounce">
+    each time a Character is effected by this Action the nearest Charcter who has not yet been effected by this Action must make the corresponding save or take the effects of this Action
+</xsl:template>
+
+<xsl:template match="addActionAttribute">
+    gains <xsl:if test="range"><xsl:value-of select="range"/>m range</xsl:if> <xsl:if test="difficulty"><xsl:value-of select="difficulty"/> difficulty</xsl:if>
+</xsl:template>
+
+<xsl:template match="createWeapon">
+    creates and equips a <xsl:value-of select="name"/> of type <xsl:apply-templates select="type"/>,<xsl:if test="actions">rip</xsl:if><xsl:if test="passiveEffect">rip</xsl:if> with difficulty <xsl:value-of select="difficulty"/>, that takes <xsl:value-of select="time"/> Time Units to use, with range <xsl:value-of select="range"/>, aoe <xsl:apply-templates select="aoe"/> and deals <xsl:value-of select="damage"/>
+</xsl:template>
+
+<xsl:template match="ignoresCover">
+    ignores cover
+</xsl:template>
+
+<xsl:template match="refill">
+    gets completely refilled
 </xsl:template>
 </xsl:stylesheet>

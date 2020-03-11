@@ -89,7 +89,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xsl:apply-templates select="saveReduceOnHit"/>
             <xsl:apply-templates select="jump"/>
             <xsl:apply-templates select="reduceDifficulty"/>
-            
+            <xsl:apply-templates select="bounce"/>
+            <xsl:apply-templates select="addActionAttribute"/>
+            <xsl:apply-templates select="ignoresCover"/>
+            <xsl:apply-templates select="refill"/>
+
             <xsl:if test="duration"> for <xsl:value-of select="duration"/> Time Units</xsl:if>.
         </xsl:when>
     </xsl:choose>
