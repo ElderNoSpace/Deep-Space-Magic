@@ -8,7 +8,7 @@
         <effect>
             <target><thing>Self</thing></target>
             <move>Speed</move>
-            <noCoolDown/>
+            <noCooldown/>
             <!--Move around the battlefield to another location, see the \hyperlink{Movement}{movement} subsection of Combat for some nuances.-->
         </effect>
     </action>
@@ -19,7 +19,7 @@
         <effect>
             <target><thing>Self</thing></target>
             <move>Speed</move>
-            <noCoolDown/>
+            <noCooldown/>
             <!--Jump over things for a maximum distance of 3m.-->
         </effect>
         <upeffect>Time decreaes by 1 per level.</upeffect>
@@ -31,7 +31,7 @@
         <effect>
             <target><thing>Self</thing></target>
             <move>Speed</move>
-            <noCoolDown/>
+            <noCooldown/>
             <!--Vertically scale walls, ropes ect. If the surface is slippery the base Difficulty Count is instead 15.-->
         </effect>
         <upeffect>The difficulty count is at -1 per level.</upeffect>

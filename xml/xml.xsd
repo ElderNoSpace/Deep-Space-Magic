@@ -148,6 +148,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 <xs:element name="duration" type="xs:int" minOccurs="0"/>
             
                 <xs:element ref="result" maxOccurs="unbounded"/>
+                <xs:element name="noCooldown" minOccurs="0"/>
             </xs:sequence>
         </xs:choice>
     </xs:complexType>
@@ -180,7 +181,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="lockdown" substitutionGroup="result"/>
     <xs:element name="damageHolder" substitutionGroup="result" type="damageType"/>
     <xs:element name="move" substitutionGroup="result" type="intSubType"/>
-    <xs:element name="noCoolDown" substitutionGroup="result"/>
 
     <xs:complexType name="targetType">
             <xs:sequence>

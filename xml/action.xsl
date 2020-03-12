@@ -93,8 +93,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xsl:apply-templates select="addActionAttribute"/>
             <xsl:apply-templates select="ignoresCover"/>
             <xsl:apply-templates select="refill"/>
+            <xsl:apply-templates select="move"/>
 
-            <xsl:if test="duration"> for <xsl:value-of select="duration"/> Time Units</xsl:if>.
+            <xsl:if test="duration"> for <xsl:value-of select="duration"/> Time Units</xsl:if>.<xsl:if test="noCooldown"> Don't roll the Action Cooldown Die after taking this action.</xsl:if>
         </xsl:when>
     </xsl:choose>
 </xsl:template>

@@ -110,4 +110,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <xsl:template match="refill">
     gets completely refilled
 </xsl:template>
+
+<xsl:template match="damageHolder">
+    character that has this must make a <xsl:value-of select="save"/> save or take <xsl:value-of select="amount"/> damage
+</xsl:template>
+
+<xsl:template match="move">
+    move to a location up to <xsl:value-of select="node()"/>m away
+</xsl:template>
 </xsl:stylesheet>
