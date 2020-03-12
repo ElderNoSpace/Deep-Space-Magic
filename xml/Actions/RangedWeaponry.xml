@@ -9,6 +9,7 @@
             <type>Shoot</type>
             <type>Weapon</type>
         </using>
+        <costs><ammo>1</ammo></costs>
         <effect>
             <target><thing>Character</thing></target>
             <range>Weapon</range>
@@ -46,6 +47,7 @@
             <type>Throw</type>
             <type>Weapon</type>
         </using>
+        <costs><ammo>1</ammo></costs>
         <effect>
             <target><thing>Character</thing></target>
             <range>Weapon</range>
@@ -67,8 +69,6 @@
                 <type>Shoot</type>
                 <thing>Action</thing>
             </target>
-            
-            
             <addActionAttribute>
                 <difficulty>-3</difficulty>
             </addActionAttribute>
@@ -86,7 +86,7 @@
             <type>Shoot</type>
             <type>Weapon</type>
         </using>
-        <cost>1 point from the Physical Pool</cost>
+        <costs><Physical>1</Physical></costs>
         <effect>
             <takeAction>Shoot Ranged Weapon</takeAction>
             <alterAttribute><difficulty>+5</difficulty></alterAttribute>

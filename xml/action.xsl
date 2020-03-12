@@ -35,8 +35,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     \rule{\hsize}{0.4pt}
     </xsl:if>
 
-    <xsl:if test="cost">
-    <xsl:value-of select="cost"/>
+    <xsl:if test="costs">
+    <xsl:apply-templates select="costs"/>
     \rule{\hsize}{0.4pt}
     </xsl:if>
 
@@ -119,6 +119,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xsl:when test="cone">in a <xsl:value-of select="cone"/>$^{\circ}$ cone</xsl:when>
         <xsl:when test="line">in a line</xsl:when>
     </xsl:choose>
+</xsl:template>
+
+<xsl:template match="costs">
+    <xsl:if test="Mental"><xsl:value-of select="Mental"/> point(s) from the Mental pool,</xsl:if>
+    <xsl:if test="Physical"><xsl:value-of select="Physical"/> point(s) from the Physical pool,</xsl:if>
+    <xsl:if test="Spirit"><xsl:value-of select="Spirit"/> point(s) from the Spirit pool,</xsl:if>
+    <xsl:if test="health"><xsl:value-of select="health"/> point(s) of damage,</xsl:if>
+    <xsl:if test="ammo"><xsl:value-of select="ammo"/> unit(s) of the respective ammunition</xsl:if>
+
 </xsl:template>
 
 </xsl:stylesheet>

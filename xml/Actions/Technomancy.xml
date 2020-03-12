@@ -7,7 +7,7 @@
         <type>Hacking</type>
         <type>Mental</type>
         <time>15</time>
-        <cost>1 point from the Mental Pool.</cost>
+        <costs><Mental>1</Mental></costs>
         <effect>
             <target><not/><type>Simple</type><thing>Item</thing></target>
             <range>100</range>
@@ -22,7 +22,7 @@
         <type>Technomancy</type>
         <type>Hacking</type>
         <type>Mental</type>
-        <cost>1 point from the Mental Pool.</cost>
+        <costs><Mental>1</Mental></costs>
         <effect>
             <target><not/><type>Simple</type><type>Weapon</type><thing>Item</thing></target>
             <range>100</range>
@@ -44,7 +44,7 @@
         <type>Melee</type>
         <type>Mental</type>
         <time>10</time>
-        <cost>1 point from the Mental Pool.</cost>
+        <costs><Mental>1</Mental></costs>
         <effect>
             <target>
                 <type>Beam</type>
@@ -67,7 +67,7 @@
         <type>Rapid Fire</type>
         <type>Mental</type>
         <time>10</time>
-        <cost>1 point from the Mental Pool.</cost>
+        <costs><Mental>1</Mental></costs>
         <effect>
             <target>
                 <type>Shoot</type>
@@ -88,7 +88,7 @@
         <type>Force</type>
         <type>Mental</type>
         <time>10</time>
-        <cost>1 point from the Mental Pool.</cost>
+        <costs><Mental>1</Mental></costs>
         <effect>
             <target>
                 <type>Force</type>

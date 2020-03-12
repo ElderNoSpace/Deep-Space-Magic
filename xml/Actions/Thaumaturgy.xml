@@ -5,7 +5,10 @@
         <name>Recharge Cell</name>
         <type>Thaumaturgy</type>
         <type>Mental</type>
-        <cost>1 Point from the Mental pool and take 1 damage</cost>
+        <costs>
+            <Mental>1</Mental>
+            <health>1</health>
+        </costs>
         <effect>
             <target>
                 <type>Cell</type>

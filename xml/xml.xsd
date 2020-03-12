@@ -116,7 +116,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     <xs:element name="time" type="xs:int" minOccurs="0"/>
                 </xs:sequence>
             </xs:choice>
-            <xs:element name="cost" type="xs:string" minOccurs="0"/>
+            <xs:element name="costs" type="costsType" minOccurs="0"/>
             <xs:element name="effect" type="effectType" maxOccurs="unbounded"/>
             <xs:element name="upeffect" type="xs:string" minOccurs="0"/>
         </xs:sequence>
@@ -128,6 +128,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     <xs:complexType name="usingType">
         <xs:group ref="typeGroup"/>
+    </xs:complexType>
+
+    <xs:complexType name="costsType">
+        <xs:all>
+            <xs:element name="Mental" type="xs:int"  minOccurs="0"/>
+            <xs:element name="Physical" type="xs:int"  minOccurs="0"/>
+            <xs:element name="Spirit" type="xs:int"  minOccurs="0"/>
+            <xs:element name="health" type="xs:int"  minOccurs="0"/>
+            <xs:element name="ammo" type="xs:int"  minOccurs="0"/>
+        </xs:all>
     </xs:complexType>
 
     <xs:element name="result" abstract="true"/>
