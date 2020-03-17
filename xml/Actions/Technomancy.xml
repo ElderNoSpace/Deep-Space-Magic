@@ -15,7 +15,13 @@
             <lockdown/>
             <!--For 25 Time Units target Item that is not Simple cannot be used.-->
         </effect>
-        <upeffect>Difficulty Count is reduced by 1 and duration increases by 25 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>25</duration>
+            </perLevel>
+            <!--Difficulty Count is reduced by 1 and duration increases by 25 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Backfire</name>
@@ -33,7 +39,12 @@
             <!--Target Character with a Weapon that is not Simple equiped within 100m must make a Mental Saving Throw or take 1 damage.
             -->
         </effect>
-        <upeffect>Difficultyy Count reduces by 1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--Difficultyy Count reduces by 1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Beam Sword Length Liberation</name>
@@ -58,7 +69,14 @@
             </addWeaponAttribute>
             <!--For 100 Time Units target Beam Sword's Range increases by 1-->
         </effect>
-        <upeffect>Difficulty count is reduced by 1, the Range increase is increased by 1 and duration increases by 50 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>1</range>
+                <duration>50</duration>
+            </perLevel>
+            <!--Difficulty count is reduced by 1, the Range increase is increased by 1 and duration increases by 50 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Rapid Fire Release</name>
@@ -79,7 +97,13 @@
             <tempType>Rapid Fire</tempType>
             <!--Target Shoot Weapon gains Rapid Fire for 100 Time Units-->
         </effect>
-        <upeffect>Difficulty count is reduced by 1 and duration increases by 50 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+            </perLevel>
+            <!--Difficulty count is reduced by 1 and duration increases by 50 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Force Distance Extension</name>
@@ -102,6 +126,13 @@
             </addWeaponAttribute>
             <!--Target Force Weapon that pushes Characters pushes that Character an extra 1d4m for 100 Time Units.-->
         </effect>
-        <upeffect>Difficulty count is reduced by 1, roll an extra 1d4 for extra distance and duration increases by 50 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <weaponAttributeIncrease><push>1d4</push></weaponAttributeIncrease>
+                <duration>50</duration>
+            </perLevel>
+            <!--Difficulty count is reduced by 1, roll an extra 1d4 for extra distance and duration increases by 50 Time Units per level.-->
+        </upeffect>
     </action>
 </actions>

@@ -16,7 +16,12 @@
             <damage>1</damage>
             <!--Target Character within 100m must make a Physical Save or be pushed back 15m and take 1 damage.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and the distance pushed back increases by 1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <pushDistance>1</pushDistance>
+            </perLevel>
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Kinetic Blast</name>
@@ -36,7 +41,20 @@
             <damage>1</damage>
             <!--All Characters in a 45$^{\circ}$ cone 50m must make a Physical Save or take 1 damage.-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level and at level 5 the arc increases to 60$^{\circ}$.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <atLevel>
+                <level>5</level>
+                <upgrade>
+                    <newAoe>
+                        <cone>60</cone>
+                    </newAoe>
+                </upgrade>
+            </atLevel>
+            <!--At level 5 the arc increases to 60$^{\circ}$.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Forceful Blade</name>
@@ -58,7 +76,14 @@
                 <modifier>1</modifier>
             </saveReduceOnHit>
             <!--For the next 50 Time Units when your Character hits with a Melee Weapon Attack the Target Character suffers a -1 to the Saving Throw--></effect>
-        <upeffect>Difficulty Count is at -1 per level, the duration increases by 50 Time Units per level and the modifier is decreased by 1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+                <saveReduceOnHitModifier>1</saveReduceOnHitModifier>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level, the duration increases by 50 Time Units per level and the modifier is decreased by 1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Forceful Shot</name>
@@ -81,7 +106,19 @@
                 <modifier>1</modifier>
             </saveReduceOnHit><!--For the next 50 Time Units when your Character hits with a Ranged Weapon Attack using a Ballistic or Rail weapon the Target Character suffers a -1 to the Saving Throw-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level, the duration increases by 50 Time Units per level and the modifier is decreased by 1 per 2 levels.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+            </perLevel>
+            <perNLevels>
+                <rate>2</rate>
+                <upgrade>
+                    <saveReduceOnHitModifier>1</saveReduceOnHitModifier>
+                </upgrade>
+            </perNLevels>
+            <!--Difficulty Count is at -1 per level, the duration increases by 50 Time Units per level and the modifier is decreased by 1 per 2 levels.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Kinetic Jump</name>
@@ -99,7 +136,14 @@
             </jump>
             <!--Jump over things from a minimum of 50m to a maximum of 100m.-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level, the Time Cost is at -1 per level and the maximum distance increases at 10m per level</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <timeCost>-1</timeCost>
+                <jumpMax>10</jumpMax>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level, the Time Cost is at -1 per level and the maximum distance increases at 10m per level-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Light Shot</name>
@@ -115,7 +159,13 @@
             <damage>1</damage>
             <!--Target Character within 200m must make a Physical Save or take 1 damage.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and range is at +5 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>5</range>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and range is at +5 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Light Blast</name>
@@ -135,7 +185,13 @@
             <damage>1</damage>
             <!--All Characters in a 75m line must make a Physical Save or take 1 damage.-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level and range is at +5 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>5</range>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level and range is at +5 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Blinding Light</name>
@@ -152,7 +208,13 @@
             <reduceDifficulty>-5</reduceDifficulty>
             <!--Target Character within 150m must make a Mental Saving Throw or suffer a -5 to all Difficulty Count Rolls for the next 100 Time Units-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level and duration is increased by 10 Time Units.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>10</duration>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level and duration is increased by 10 Time Units.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Eletric Shot</name>
@@ -169,7 +231,13 @@
             <wait>5</wait>
             <!--Target Character within 100m must make a Physical Save or have to wait 5 Time Units and take 1 damage.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and Time Units waited increases by +1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <waitIncrease>1</waitIncrease>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and Time Units waited increases by +1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="20" specialist="true">
         <name>Eletric Arc</name>
@@ -186,7 +254,12 @@
             <bounce/>
             <!--Target Character within 75m must make a Physical Save or take 1 damage. Each time a Character takes damage from this Action the nearest Character that has not been effected by it must make a Physical Save or take 1 damage-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Rail Shot</name>
@@ -205,7 +278,13 @@
                 <range>25</range>
             </addActionAttribute>
             <!--Modifies Shoot Ranged Weapon Action Range by +25m of a Ballistic Weapon.--></effect>
-        <upeffect>-1 per level to the Time Modifier up to five levels and increases range by 5m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <timeCost>-1</timeCost>
+                <range>5</range>
+            </perLevel>
+            <!---1 per level to the Time Modifier up to five levels and increases range by 5m per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Lightning Throwing</name>
@@ -233,7 +312,16 @@
             </createWeapon>
             <!--For 50 Time Units a spear of lightning Appears in your Character's hand which has Difficulty Count 15, Time 10, Range 100, Damage 1.-->
         </effect>
-        <upeffect>Difficult Count of this Action is at -1 per level, the duration increases by 50 Time Units and the range of the spear of lightning is at +10m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+                <weaponAttributeIncrease>
+                    <range>10</range>
+                </weaponAttributeIncrease>
+            </perLevel>
+            <!--Difficult Count of this Action is at -1 per level, the duration increases by 50 Time Units and the range of the spear of lightning is at +10m per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Fire Shot</name>
@@ -248,7 +336,18 @@
             <damage>2</damage>
             <!--Target Character within 50m must make a Physical Save or take 2 damage.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and every 5 levels damage increases by 1.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <perNLevels>
+                <rate>5</rate>
+                <upgrade>
+                    <damage>1</damage>
+                </upgrade>
+            </perNLevels>
+            <!--The Difficulty Count is at -1 per level and every 5 levels damage increases by 1.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Fire Blast</name>
@@ -268,7 +367,13 @@
             <damage>1</damage>
             <!--All Characters in a 10m radius circle at 75m must make a Physical Save or take 1 damage.-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level and radius is at +1m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <upAoe><circle>1</circle></upAoe>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level and radius is at +1m per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Flame Grenade</name>
@@ -289,7 +394,13 @@
             <ignoresCover/>
             <!--All Characters in a 5m radius circle at 50m must make a Physical Save or take 1 damage, ignores Cover.-->
         </effect>
-        <upeffect>Difficulty Count is at -1 per level and radius is at +1m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <upAoe><circle>1</circle></upAoe>
+            </perLevel>
+            <!--Difficulty Count is at -1 per level and radius is at +1m per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Flame Blade</name>
@@ -316,6 +427,15 @@
             </createWeapon>
             <!--For 50 Time Units a blade of fire Appears in your Character's hand which has Difficulty Count 15, Time 15, Range 1, Damage 2 and is always a Melee Weapon.-->
         </effect>
-        <upeffect>Difficult Count of this Action is at -1 per level, the duration increases by 50 Time Units and the range of the blade of fire is at +1m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+                <weaponAttributeIncrease>
+                    <range>1</range>
+                </weaponAttributeIncrease>
+            </perLevel>
+            <!--Difficult Count of this Action is at -1 per level, the duration increases by 50 Time Units and the range of the blade of fire is at +1m per level.-->
+        </upeffect>
     </action>
 </actions>

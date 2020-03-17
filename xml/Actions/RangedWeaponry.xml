@@ -19,7 +19,12 @@
             <damage>Weapon</damage>
             <!--Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l^2$">
         <name>Shoot Two Ranged Weapons</name>
@@ -37,7 +42,9 @@
             <using>Weapon2</using>
             <!--Make a Shoot Ranged Weapon Action for two differenent equiped Ranged Weapons immediatly.-->
         </effect>
-        <upeffect>The Action Time reduces by 1 each level to a minimum of the longest of the two Weapon's Time.</upeffect>
+        <upeffect>
+            <!--The Action Time reduces by 1 each level to a minimum of the longest of the two Weapon's Time.-->
+        </upeffect>
     </action>
     <action upgrade="$l$">
         <name>Throw Weapon</name>
@@ -57,7 +64,12 @@
             <damage>Weapon</damage>
             <!--Target Character at Weapon Range and all other Characters within area of effect must make a Physical Save or take Weapon Damage.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l!$">
         <name>Aim</name>
@@ -74,7 +86,12 @@
             </addActionAttribute>
             <!--Modifies Shoot Ranged Weapon Action Difficulty by -3.-->
         </effect>
-        <upeffect>-1 per level to the Time Modifier up to five levels.</upeffect>
+        <upeffect>
+            <perLevel>
+                <timeCost>-1</timeCost>
+            </perLevel>
+            <!---1 per level to the Time Modifier up to five levels.-->
+        </upeffect>
     </action>
     <action upgrade="$l$">
         <name>Double Shot</name>
@@ -96,6 +113,17 @@
             <using>Weapon</using>
             <!--Make two Shoot Ranged Weapon Actions with a Rapid Fire Ranged Weapon at +5 Difficulty-->
         </effect>
-        <upeffect>Extra difficulty is decreased by 1 each level to a minimum of 0 and every 5 levels the number of Shoot Ranged Weapon Actions made increases by 1.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <perNLevels>
+                <rate>5</rate>
+                <upgrade>
+                    <numberOfActionsIncrease>1</numberOfActionsIncrease>
+                </upgrade>
+            </perNLevels>
+            <!--Extra difficulty is decreased by 1 each level to a minimum of 0 and every 5 levels the number of Shoot Ranged Weapon Actions made increases by 1.-->
+        </upeffect>
     </action>
 </actions>

@@ -118,7 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             </xs:choice>
             <xs:element name="costs" type="costsType" minOccurs="0"/>
             <xs:element name="effect" type="effectType" maxOccurs="unbounded"/>
-            <xs:element name="upeffect" type="xs:string" minOccurs="0"/>
+            <xs:element name="upeffect" type="upgradeEffectsType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="difficulty" type="intSubType"/>
         <xs:attribute name="upgrade" type="xs:string"/>
@@ -137,6 +137,50 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:element name="Spirit" type="xs:int"  minOccurs="0"/>
             <xs:element name="health" type="xs:int"  minOccurs="0"/>
             <xs:element name="ammo" type="xs:int"  minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="upgradeEffectsType">
+        <xs:sequence>
+            <xs:element name="perLevel" type="upgradeEffectType" minOccurs="0"/>
+            <xs:element name="perNLevels" type="perNLevelsType" minOccurs="0"/>
+            <xs:element name="atLevel" type="atLevelType" minOccurs="0">
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="perNLevelsType">
+        <xs:sequence>
+            <xs:element name="rate" type="xs:int"/>
+            <xs:element name="upgrade" type="upgradeEffectType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="atLevelType">
+        <xs:sequence>
+            <xs:element name="level" type="xs:int"/>
+            <xs:element name="upgrade" type="upgradeEffectType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="upgradeEffectType">
+        <xs:all>
+            <xs:element name="difficultyCount" type="xs:int" minOccurs="0"/>
+            <xs:element name="duration" type="xs:int" minOccurs="0"/>
+            <xs:element name="timeCost" type="xs:int" minOccurs="0"/>
+            <xs:element name="range" type="xs:int" minOccurs="0"/>
+
+            <xs:element name="newAoe" type="aoeType" minOccurs="0"/>
+            <xs:element name="upAoe" type="aoeType" minOccurs="0"/>
+
+            <xs:element name="damage" type="xs:int" minOccurs="0"/>
+            <xs:element name="pushDistance" type="xs:int" minOccurs="0"/>
+            <xs:element name="saveReduceOnHitModifier" type="xs:int" minOccurs="0"/>
+            <xs:element name="jumpMax" type="xs:int" minOccurs="0"/>
+            <xs:element name="waitIncrease" type="xs:int" minOccurs="0"/>
+            <xs:element name="weaponAttributeIncrease" type="weaponAttributeType" minOccurs="0"/>
+            <xs:element name="numberOfActionsIncrease" type="xs:int" minOccurs="0"/>
+            <xs:element name="cellsRefilledIncrease" type="xs:int" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
 

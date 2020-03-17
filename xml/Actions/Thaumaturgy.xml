@@ -17,6 +17,17 @@
             <refill/>
             <!--Completely refill 1 Cell.-->
         </effect>
-        <upeffect>Decrease difficulty by 1 per level, every 5 levels increase Cells refilled by 1.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <perNLevels>
+                <rate>5</rate>
+                <upgrade>
+                    <cellsRefilledIncrease>1</cellsRefilledIncrease>
+                </upgrade>
+            </perNLevels>
+            <!--Decrease difficulty by 1 per level, every 5 levels increase Cells refilled by 1.-->
+        </upeffect>
     </action>
 </actions>

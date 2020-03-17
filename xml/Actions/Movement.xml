@@ -22,7 +22,12 @@
             <noCooldown/>
             <!--Jump over things for a maximum distance of 3m.-->
         </effect>
-        <upeffect>Time decreaes by 1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <timeCost>-1</timeCost>
+            </perLevel>
+            <!--Time decreaes by 1 per level.-->
+        </upeffect>
     </action>
     <action difficulty="10" upgrade="$l$" index="true">
         <name>Climb</name>
@@ -34,6 +39,11 @@
             <noCooldown/>
             <!--Vertically scale walls, ropes ect. If the surface is slippery the base Difficulty Count is instead 15.-->
         </effect>
-        <upeffect>The difficulty count is at -1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--The difficulty count is at -1 per level.-->
+        </upeffect>
     </action>
 </actions>
