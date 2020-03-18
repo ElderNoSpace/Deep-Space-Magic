@@ -44,7 +44,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
     <xsl:if test="upeffect">
     \rule{\hsize}{0.4pt}         
-    <xsl:value-of select="upeffect"/>
+    <xsl:apply-templates select="upeffect"/>
     </xsl:if>
 
     <xsl:if test="score">
@@ -128,6 +128,14 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xsl:if test="health"><xsl:value-of select="health"/> point(s) of damage,</xsl:if>
     <xsl:if test="ammo"><xsl:value-of select="ammo"/> unit(s) of the respective ammunition</xsl:if>
 
+</xsl:template>
+
+<xsl:template match="upeffect">
+    <xsl:if test="perLevel"> <xsl:apply-templates select="perLevel"/> per level</xsl:if><xsl:if test="perNLevels"> <xsl:apply-templates select="perNLevels/upgrade"/> per <xsl:value-of select="perNLevels/rate"/> levels</xsl:if><xsl:if test="atLevel"> <xsl:apply-templates select="atLevel/upgrade"/> at level <xsl:value-of select="perNLevels/level"/></xsl:if>.
+</xsl:template>
+
+<xsl:template match="upgrade|perLevel">
+    <xsl:if test="difficultyCount">increase Difficulty Count by <xsl:value-of select="difficultyCount"/></xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>
