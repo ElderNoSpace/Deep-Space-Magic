@@ -14,7 +14,13 @@
             <save>Mental</save>
             <wait>25</wait>
             <!--Target Character within 100m must make a Mental Save or must wait 25 Time Units.--></effect>
-        <upeffect>The Difficulty Count is at -1 per level and the amount of Time Units the affected Character has to wait increases by 5.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <waitIncrease>5</waitIncrease>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and the amount of Time Units the affected Character has to wait increases by 5.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Telepathic Invasion</name>
@@ -29,7 +35,13 @@
             <save>Mental</save>
             <actionSteal/>
             <!--Target Character within 20m must make a Mental Save or you decide their next Action, this Action must be one they are able to do.--></effect>
-        <upeffect>The Difficulty Count is at -1 per level and range is at +1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>1</range>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and range is at +1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="5" specialist="true">
         <name>Sensory Link</name>
@@ -45,7 +57,13 @@
             <duration>250</duration>
             <visionSteal/>
             <!--Target Character must make a Mental Saving Throw or  your Character invades the target Character's senses and is able to see through them for 250 Time Units.--></effect>
-        <upeffect>The Difficulty Count is at -1 per level and the duration increases by 50 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and the duration increases by 50 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Illusion</name>
@@ -61,7 +79,12 @@
             <duration>100</duration>
             <illusion/>
             <!--Target Character within 100m must make a Mental Saving Throw or they percive an object that isn't actually there. This object looks, sounds and smells correct but is intangable to the affected Character.--></effect>
-        <upeffect>The Difficulty Count is at -1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Telekinetic Levitatation</name>
@@ -77,7 +100,12 @@
             <duration>100</duration>
             <levitate/>
             <!--Your Character floats up one meter into the air and you can move $2ms^{-1}$ and ignore Difficult Terrain.--></effect>
-        <upeffect>The Difficulty Count is at -1 per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Far Blade</name>
@@ -101,7 +129,14 @@
             </setWeaponAttribute>
             <!--The range of target Melee Weapon becomes 100m and gains the Ranged type for 100 Time Units.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level, the range increases by 10m per level and the duration increases by 10 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>10</range>
+                <duration>10</duration>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level, the range increases by 10m per level and the duration increases by 10 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Telekinetic Grab</name>
@@ -115,7 +150,13 @@
             <range>100</range>
             <pullItem>10</pullItem>
             <!--Your Character pulls target non-Character object, less than 10kg, within 100m that is not held by any other Character into your Character's hand.--></effect>
-        <upeffect>The Difficulty count decreases by 1 per level and the maximum weight of the object increases by 5kg per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <pullWeight>5</pullWeight>
+            </perLevel>
+            <!--The Difficulty count decreases by 1 per level and the maximum weight of the object increases by 5kg per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="10" specialist="true">
         <name>Helping Hand</name>
@@ -132,7 +173,13 @@
             <equip><type>One Handed</type></equip>
             <!--Your Character equips a One Handed Weapon for 100 Time Units.-->
         </effect>
-        <upeffect>The Difficulty count decreases by 1 per level and the duration increases by 50 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <duration>50</duration>
+            </perLevel>
+            <!--The Difficulty count decreases by 1 per level and the duration increases by 50 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Clairvoyance</name>
@@ -151,7 +198,12 @@
             </saveModifier>
             <!--Your Character gains a +5 modifier to your Physical Save for 100 Time Units.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and duration increases by 10 Time Units per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and duration increases by 10 Time Units per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Apportation</name>
@@ -166,7 +218,13 @@
             <teleport/>
             <!--Your Character teleports up to 50m away-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and the range is at +10m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>10</range>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and the range is at +10m per level.-->
+        </upeffect>
     </action>
     <action upgrade="$l$" difficulty="15" specialist="true">
         <name>Projection</name>
@@ -182,6 +240,12 @@
             <allLineOfSight/>
             <!--Your Character is able to see everything within 100m that they could normally see.-->
         </effect>
-        <upeffect>The Difficulty Count is at -1 per level and the range is at +50m per level.</upeffect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+                <range>50</range>
+            </perLevel>
+            <!--The Difficulty Count is at -1 per level and the range is at +50m per level.-->
+        </upeffect>
     </action>
 </actions>

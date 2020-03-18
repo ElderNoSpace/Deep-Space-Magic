@@ -181,6 +181,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:element name="weaponAttributeIncrease" type="weaponAttributeType" minOccurs="0"/>
             <xs:element name="numberOfActionsIncrease" type="xs:int" minOccurs="0"/>
             <xs:element name="cellsRefilledIncrease" type="xs:int" minOccurs="0"/>
+            <xs:element name="pullWeight" type="xs:int" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
 
