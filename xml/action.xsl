@@ -135,7 +135,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 </xsl:template>
 
 <xsl:template match="upgrade|perLevel">
-    <xsl:if test="difficultyCount">increase Difficulty Count by <xsl:value-of select="difficultyCount"/></xsl:if>
+    <xsl:if test="difficultyCount"> increase Difficulty Count by <xsl:value-of select="difficultyCount"/></xsl:if>
+    <xsl:if test="duration"> increase Duration by <xsl:value-of select="duration"/> Time Units</xsl:if>
+    <xsl:if test="timeCost"> increase Time Cost by <xsl:value-of select="timeCost"/> Time Units</xsl:if>
+    <xsl:if test="range"> increase Range by <xsl:value-of select="range"/>m</xsl:if>
+    <xsl:if test="newAoe"> change the aoe to <apply-templates select="newAoe"/></xsl:if>
+    <xsl:if test="upAoe"> increase the aoe by <apply-templates select="upAoe"/></xsl:if>
+    <xsl:if test="damage"> increase damage by <xsl:value-of select="damage"/></xsl:if>
+    <xsl:if test="pushDistance"> increase push distance by <xsl:value-of select="pushDistance"/></xsl:if>
+    <xsl:if test="saveReduceOnHitModifier"> increase the amount the save is reduced on hit by <xsl:value-of select="saveReduceOnHitModifier"/></xsl:if>
+    <xsl:if test="jumpMax"> increase maximum jump distance by <xsl:value-of select="jumpMax"/>m</xsl:if>
+    <xsl:if test="waitIncrease"> increase the time the target has to wait by <xsl:value-of select="waitIncrease"/> Time Units</xsl:if>
+    <xsl:if test="weaponAttributeIncrease"><xsl:apply-templates select="weaponAttributeIncrease"/></xsl:if>
+    <xsl:if test="numberOfActionsIncrease"> increase the number of actions done by <xsl:value-of select="numberOfActionsIncrease"/></xsl:if>
+    <xsl:if test="cellsRefilledIncrease"> increase number of cells refilled by <xsl:value-of select="cellsRefilledIncrease"/></xsl:if>
+    <xsl:if test="pullWeight"> increase the weight that can be pulled by <xsl:value-of select="pullWeight"/>kg</xsl:if>
 </xsl:template>
+
+<!--
+newAoe
+ipAoe
+weaponattributeincrease
+-->
 
 </xsl:stylesheet>

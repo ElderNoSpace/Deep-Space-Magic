@@ -73,7 +73,7 @@
             <duration>50</duration>
             <saveReduceOnHit>
                 <save>Physical</save>
-                <modifier>1</modifier>
+                <modifier>-1</modifier>
             </saveReduceOnHit>
             <!--For the next 50 Time Units when your Character hits with a Melee Weapon Attack the Target Character suffers a -1 to the Saving Throw--></effect>
         <upeffect>
