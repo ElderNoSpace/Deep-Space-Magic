@@ -140,7 +140,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xsl:if test="timeCost"> increase Time Cost by <xsl:value-of select="timeCost"/> Time Units</xsl:if>
     <xsl:if test="range"> increase Range by <xsl:value-of select="range"/>m</xsl:if>
     <xsl:if test="newAoe"> change the aoe to <apply-templates select="newAoe"/></xsl:if>
-    <xsl:if test="upAoe"> increase the aoe by <apply-templates select="upAoe"/></xsl:if>
+    <xsl:if test="upAoe"> increase the <apply-templates select="upAoe"/></xsl:if>
     <xsl:if test="damage"> increase damage by <xsl:value-of select="damage"/></xsl:if>
     <xsl:if test="pushDistance"> increase push distance by <xsl:value-of select="pushDistance"/></xsl:if>
     <xsl:if test="saveReduceOnHitModifier"> increase the amount the save is reduced on hit by <xsl:value-of select="saveReduceOnHitModifier"/></xsl:if>
@@ -152,10 +152,32 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xsl:if test="pullWeight"> increase the weight that can be pulled by <xsl:value-of select="pullWeight"/>kg</xsl:if>
 </xsl:template>
 
-<!--
-newAoe
-ipAoe
-weaponattributeincrease
--->
+<xsl:template match="newAoe">
+    <xsl:choose>
+        <xsl:when test="Weapon">Weapon aoe</xsl:when>
+        <xsl:when test="circle">a <xsl:value-of select="circle"/>m radius circle</xsl:when>
+        <xsl:when test="cone">a <xsl:value-of select="cone"/>$^{\circ}$ cone</xsl:when>
+        <xsl:when test="line">a line</xsl:when>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template match="upAoe">
+    <xsl:choose>
+        <xsl:when test="Weapon"> nothing</xsl:when>
+        <xsl:when test="circle">radius by <xsl:value-of select="circle"/>m</xsl:when>
+        <xsl:when test="cone">angle by <xsl:value-of select="cone"/>$^{\circ}$</xsl:when>
+        <xsl:when test="line"> nothing</xsl:when>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template match="weaponAttributeIncrease">
+    increase 
+    <xsl:choose>
+        <xsl:when test="range">range by <xsl:value-of select="range"/>m</xsl:when>
+        <xsl:when test="difficulty">difficulty count by <xsl:value-of select="difficulty"/></xsl:when>
+        <xsl:when test="push">push distance by <xsl:value-of select="pusm"/>m</xsl:when>
+    </xsl:choose>
+    of the created weapon
+</xsl:template>
 
 </xsl:stylesheet>
