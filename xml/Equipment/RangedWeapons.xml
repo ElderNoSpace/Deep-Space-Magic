@@ -9,7 +9,6 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <cost>60</cost>
-        <passiveEffect></passiveEffect>
         <difficulty>15</difficulty>
         <time>20</time>
         <range>50</range>
@@ -23,7 +22,6 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <cost>85</cost>
-        <passiveEffect></passiveEffect>
         <difficulty>15</difficulty>
         <time>15</time>
         <range>25</range>
@@ -37,7 +35,6 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <cost>85</cost>
-        <passiveEffect></passiveEffect>
         <difficulty>15</difficulty>
         <time>25</time>
         <range>75</range>
@@ -51,7 +48,6 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <cost>60</cost>
-        <passiveEffect></passiveEffect>
         <difficulty>20</difficulty>
         <time>25</time>
         <range>50</range>
@@ -65,11 +61,10 @@
         <type>Shoot</type>
         <type>Ranged</type>
         <cost>110</cost>
-        <passiveEffect></passiveEffect>
         <difficulty>10</difficulty>
         <time>20</time>
         <range>5</range>
-        <aoe>22.5$^{\circ}$ cone</aoe>
+        <aoe><cone>22.5</cone></aoe>
         <damage>1</damage>
     </weapon>
     <weapon>
@@ -125,7 +120,7 @@
         <difficulty>10</difficulty>
         <time>20</time>
         <range>10</range>
-        <aoe>45$^{\circ}$ cone</aoe>
+        <aoe><cone>45</cone></aoe>
         <damage>1</damage>
     </weapon>
     <weapon>

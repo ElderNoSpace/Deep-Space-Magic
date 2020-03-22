@@ -359,11 +359,20 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:group ref="typeGroup"/>
-            <xs:element name="cost" type="xs:string" minOccurs="0"/>
+            <xs:element name="cost" type="xs:int" minOccurs="0"/>
             <xs:element ref="actions" minOccurs="0"/>
-            <xs:element name="passiveEffect" type="xs:string" minOccurs="0"/>
+            <xs:element name="passiveEffect" type="passiveEffectType" minOccurs="0"/>
         </xs:sequence>
     </xs:group>
+
+    <xs:complexType name="passiveEffectType">
+        <xs:all>
+            <xs:element name="ignoresCover" minOccurs="0"/>
+            <xs:element name="push" minOccurs="0" type="xs:int"/>
+            <xs:element name="wait" minOccurs="0" type="xs:int"/>
+            <xs:element name="speedIncrease" type="xs:float" minOccurs="0"/>
+        </xs:all>
+    </xs:complexType>
 
     <!--A list of items-->
     <xs:complexType name="itemsType">
@@ -402,7 +411,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <xs:choice>
             <xs:element name="Weapon"/>
             <xs:element name="circle" type="xs:int"/>
-            <xs:element name="cone" type="xs:int"/>
+            <xs:element name="cone" type="xs:float"/>
             <xs:element name="line"/>
         </xs:choice>
     </xs:complexType>

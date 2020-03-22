@@ -16,7 +16,10 @@
         <type>Physical Armour</type>
         <type>Armour</type>
         <cost>200</cost>
-        <passiveEffect>-0.1m/s speed</passiveEffect>
+        <passiveEffect>
+            <speedIncrease>-0.1</speedIncrease>
+            <!---0.1m/s speed-->
+        </passiveEffect>
         <save>Physical</save>
         <modifier>2</modifier>
     </armour>
@@ -26,7 +29,9 @@
         <type>Physical Armour</type>
         <type>Armour</type>
         <cost>500</cost>
-        <passiveEffect>-0.5m/s speed</passiveEffect>
+        <passiveEffect>
+            <speedIncrease>-0.5</speedIncrease>
+        </passiveEffect>
         <save>Physical</save>
         <modifier>3</modifier>
     </armour>

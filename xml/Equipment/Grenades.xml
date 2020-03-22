@@ -8,7 +8,7 @@
         <type>Ballistic</type>
         <type>Ranged</type>
         <cost>5</cost>
-        <passiveEffect>Ignores Cover</passiveEffect>
+        <passiveEffect><ignoresCover/></passiveEffect>
         <difficulty>15</difficulty>
         <time>15</time>
         <range>50</range>
@@ -21,10 +21,11 @@
         <type>Plasma</type>
         <type>Ranged</type>
         <cost>10</cost>
-        <passiveEffect>Ignores Cover</passiveEffect>
+        <passiveEffect><ignoresCover/></passiveEffect>
         <difficulty>15</difficulty>
         <time>15</time>
-        <range>10m radius at 50</range>
+        <range>50</range>
+        <aoe><circle>10</circle></aoe>
         <damage>1</damage>
     </weapon>
     <weapon>
@@ -34,7 +35,11 @@
         <type>Throw</type>
         <type>Ranged</type>
         <cost>5</cost>
-        <passiveEffect>Ignores Cover, pushes target on hit 5m in any direction</passiveEffect>
+        <passiveEffect>
+            <ignoresCover/>
+            <push>5</push>
+            <!--Ignores Cover, pushes target on hit 5m in any direction-->
+        </passiveEffect>
         <difficulty>15</difficulty>
         <time>15</time>
         <range>50</range>
@@ -47,7 +52,11 @@
         <type>Laser</type>
         <type>Ranged</type>
         <cost>15</cost>
-        <passiveEffect>Ignores Cover, target must wait 25 time units on a failed Physical save.</passiveEffect>
+        <passiveEffect>
+            <ignoresCover/>
+            <wait>25</wait>
+            <!--Ignores Cover, target must wait 25 time units on a failed Physical save.-->
+        </passiveEffect>
         <difficulty>20</difficulty>
         <time>10</time>
         <range>100</range>

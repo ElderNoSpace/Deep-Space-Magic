@@ -80,7 +80,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!--Creates the table rows for the weapons-->
 <xsl:template match="weapon"><!--
 --><xsl:if test="@index='true'">\index{<xsl:value-of select="name"/>}</xsl:if><!--
--->\hypertarget{Weapon_<xsl:value-of select="translate(name, ' ', '_')"/>}{<xsl:value-of select="name"/>}&amp;<xsl:value-of select="cost"/>&amp;<xsl:value-of select="difficulty"/>&amp;<xsl:value-of select="time"/>&amp;<xsl:value-of select="range"/>m&amp;<xsl:value-of select="damage"/>&amp;<xsl:if test="passiveEffect"><xsl:value-of select="passiveEffect"/></xsl:if>&amp;<!--
+-->\hypertarget{Weapon_<xsl:value-of select="translate(name, ' ', '_')"/>}{<xsl:value-of select="name"/>}&amp;<xsl:value-of select="cost"/>&amp;<xsl:value-of select="difficulty"/>&amp;<xsl:value-of select="time"/>&amp;<xsl:value-of select="range"/>m<xsl:if test="aoe">  <xsl:apply-templates select="aoe"/></xsl:if>&amp;<xsl:value-of select="damage"/>&amp;<xsl:apply-templates select="passiveEffect"/>&amp;<!--
 --><xsl:for-each select="actions/action"><!--
     --><xsl:call-template name="linkActions"><!--
         --><xsl:with-param name="name" select = "name"/><!--
@@ -92,13 +92,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!--Creates the table rows for the armours-->
 <xsl:template match="armour"><!--
 --><xsl:if test="@index='true'">\index{<xsl:value-of select="name"/>}</xsl:if><!--
--->\hypertarget{Armour_<xsl:value-of select="translate(name, ' ', '_')"/>}{<xsl:value-of select="name"/>}&amp;<xsl:value-of select="cost"/>&amp;<xsl:value-of select="save"/>&amp;<xsl:value-of select="modifier"/>&amp;<xsl:value-of select="passiveEffect"/>&amp;<!--
+-->\hypertarget{Armour_<xsl:value-of select="translate(name, ' ', '_')"/>}{<xsl:value-of select="name"/>}&amp;<xsl:value-of select="cost"/>&amp;<xsl:value-of select="save"/>&amp;<xsl:value-of select="modifier"/>&amp;<xsl:apply-templates select="passiveEffect"/>&amp;<!--
 --><xsl:for-each select="actions/action"><!--
     --><xsl:call-template name="linkActions"><!--
         --><xsl:with-param name="name" select = "name"/><!--
     --></xsl:call-template><!--
 --></xsl:for-each>\\
 \hline
+</xsl:template>
+
+<xsl:template match="aoe">
+    <xsl:choose>
+        <xsl:when test="circle"><xsl:value-of select="circle"/>m Circle</xsl:when>
+        <xsl:when test="cone"><xsl:value-of select="cone"/>$^{\circ}$ Cone</xsl:when>
+        <xsl:when test="line">Line</xsl:when>
+    </xsl:choose>
+</xsl:template>
+
+<xsl:template match="passiveEffect">
+    <xsl:if test="ignoresCover">Ignores Cover,</xsl:if>
+    <xsl:if test="push">On damage pushes target <xsl:value-of select="push"/>m,</xsl:if>
+    <xsl:if test="wait">On damage target waits <xsl:value-of select="wait"/> Time Units,</xsl:if>
+    <xsl:if test="speedIncrease">Wearer gains <xsl:value-of select="speedIncrease"/>m/s speed,</xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>
