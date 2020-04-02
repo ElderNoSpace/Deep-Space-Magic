@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type = "text/xsl" href = "../Converter.xsl"?> 
+<actions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xml.xsd">
+    <action upgrade="$l$" difficulty="15">
+        <name>Logical Argument</name>
+        <type>Logic</type>
+        <type>Argument</type>
+        <time>20</time>
+        <effect>
+            <target><thing>Character</thing></target>
+            <persuade>1</persuade>
+        </effect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+        </upeffect>
+    </action>
+    <action upgrade="$l$">
+        <name>Correct Hypothesis</name>
+        <type>Logic</type>
+        <type>Argument</type>
+        <time>+5</time>
+        <effect>
+            <target>
+                <type>Logic</type>
+                <type>Argument</type>
+                <thing>Character</thing>
+            </target>
+            <addActionAttribute>
+                <difficulty>-3</difficulty>
+            </addActionAttribute>
+        </effect>
+        <upeffect>
+            <perLevel>
+                <timeCost>-1</timeCost>
+            </perLevel>
+        </upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15">
+        <name>Reflective Implication</name>
+        <type>Logic</type>
+        <type>Argument</type>
+        <type>Lie</type>
+        <time>10</time>
+        <effect>
+            <target><thing>Character</thing></target>
+            <negateArgument/>
+        </effect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+        </upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15">
+        <name>Cyclic Argument</name>
+        <type>Logic</type>
+        <type>Argument</type>
+        <type>Lie</type>
+        <time>20</time>
+        <effect>
+            <target><thing>Character</thing></target>
+            <persuade>1</persuade>
+        </effect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+        </upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15">
+        <name>Appeal to Emotion</name>
+        <type>Emotion</type>
+        <time>20</time>
+        <effect>
+            <target><thing>Character</thing></target>
+            <persuade>1</persuade>
+        </effect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+        </upeffect>
+    </action>
+    <action upgrade="$l$" difficulty="15">
+        <name>Intimidate</name>
+        <type>Emotion</type>
+        <type>Physical</type>
+        <time>20</time>
+        <effect>
+            <target><thing>Character</thing></target>
+            <persuade>1</persuade>
+        </effect>
+        <upeffect>
+            <perLevel>
+                <difficultyCount>-1</difficultyCount>
+            </perLevel>
+        </upeffect>
+    </action>
+</actions>

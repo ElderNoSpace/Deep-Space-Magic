@@ -236,6 +236,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <xs:element name="lockdown" substitutionGroup="result"/>
     <xs:element name="damageHolder" substitutionGroup="result" type="damageType"/>
     <xs:element name="move" substitutionGroup="result" type="intSubType"/>
+    <xs:element name="persuade" substitutionGroup="result" type="xs:int"/>
+    <xs:element name="negateArgument" substitutionGroup="result"/>
 
     <xs:complexType name="targetType">
             <xs:sequence>
@@ -510,6 +512,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             <xs:enumeration value="Rail"/>
             <xs:enumeration value="Missile"/>
             <xs:enumeration value="Plasma"/>
+
+            <xs:enumeration value="Logic"/>
+            <xs:enumeration value="Emotion"/>
+            <xs:enumeration value="Argument"/>
+            <xs:enumeration value="Lie"/>
 
             <xs:enumeration value="Armour"/>
             <xs:enumeration value="Physical Armour"/>
