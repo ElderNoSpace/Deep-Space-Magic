@@ -17,7 +17,7 @@
         </upeffect>
     </action>
     <action upgrade="$l$">
-        <name>Correct Hypothesis</name>
+        <name>Applplicible Hypothesis</name>
         <type>Logic</type>
         <type>Argument</type>
         <time>+5</time>
@@ -37,7 +37,7 @@
             </perLevel>
         </upeffect>
     </action>
-    <action upgrade="$l$" difficulty="15">
+    <action upgrade="$l$" difficulty="20">
         <name>Reflective Implication</name>
         <type>Logic</type>
         <type>Argument</type>
@@ -53,7 +53,7 @@
             </perLevel>
         </upeffect>
     </action>
-    <action upgrade="$l$" difficulty="15">
+    <action upgrade="$l$" difficulty="14">
         <name>Cyclic Argument</name>
         <type>Logic</type>
         <type>Argument</type>
