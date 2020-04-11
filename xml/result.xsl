@@ -118,4 +118,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <xsl:template match="move">
     move to a location up to <xsl:value-of select="node()"/>m away
 </xsl:template>
+
+<xsl:template match="persuade">
+    gain <xsl:value-of select="node()"/> success score
+</xsl:template>
+
+<xsl:template match="negateArgument">
+    recover the success score lost of the previous Argument action
+</xsl:template>
 </xsl:stylesheet>

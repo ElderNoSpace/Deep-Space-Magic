@@ -41,6 +41,7 @@
     <category>
         <index>Social Actions</index>
         <name>Social</name>
+        <subdoc ref="Social.xml"/>
     </category>
     <category>
         <index>Investigation Actions</index>

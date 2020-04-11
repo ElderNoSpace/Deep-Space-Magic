@@ -72,7 +72,7 @@
     <action upgrade="$l$" difficulty="15">
         <name>Appeal to Emotion</name>
         <type>Emotion</type>
-        <time>20</time>
+        <time>30</time>
         <effect>
             <target><thing>Character</thing></target>
             <persuade>1</persuade>
